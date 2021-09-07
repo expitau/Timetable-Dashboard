@@ -1,0 +1,4526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- non framed -->
+<head>
+<title>Master Schedule List By Course</title>
+
+<style>
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
+</style>
+<style id="psDialogHideTillReady">
+.dialog, .dialogC, .dialogM, .dialogR, .dialogF, .dialogDiv, .dialogDivC, .dialogDivM, .replaceNext { visibility: hidden;}
+</style>
+<link media="screen" rel="stylesheet" href="/images/css/customization.css"/>
+
+<!-- ServerInstanceId: 2999 -->
+<script type='text/javascript'>if(!_messages)var _messages = {};_messages["psx.js.admin_javascript.validate_date.month_1"] = "Month ";_messages["psx.js.admin_javascript.validate_date._doesnt_have_31_days"] = " doesn't have 31 days.";_messages["psx.js.admin_javascript.validate_date._doesnt_have_"] = " doesn't have ";_messages["psx.js.admin_javascript.validate_date.month_must_be_between_1_and_12"] = "Month must be between 1 and 12.";_messages["psx.js.admin_javascript.validate_date.date_format_must_be"] = "Date format must be ({0}).";_messages["psx.js.admin_javascript.validate_date.day_must_be_between_1_and_31"] = "Day must be between 1 and 31.";_messages["psx.js.admin_javascript.validate_date._days"] = " days.";_messages["psx.js.admin_javascript.validate_date.february_"] = "February ";if (typeof pss_text != 'function') { function pss_text(key, params, returnKeyIfNotFound) { if (_messages[key] === undefined) { if (returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true) {return key;} else {return 'String key was not found!'; }}if(params == null || params.length == 0) {return _messages[key]; }else { msg = _messages[key]; for ( i = 0; i < params.length; i++) {token = "{"+i+"}"; msg = msg.replace(token, params[i]); }return msg;} } }</script>
+<script type='text/javascript'>if(!_messages)var _messages = {};_messages["psx.common.daynamesmin_tue"] = "Tu";_messages["psx.common.daynamesmin_thu"] = "Th";_messages["psx.common.daynamesmin_sun"] = "Su";_messages["psx.common.daynamesmin_sat"] = "Sa";_messages["psx.common.daynamesshort_fri"] = "Fri";_messages["psx.common.mydata_button_title"] = "MyData Button";_messages["psx.common.legend"] = "Legend ";_messages["psx.common.psweblink"] = "PowerSchool.com";_messages["psx.common.daynamesmin_wed"] = "We";_messages["psx.common.term"] = "Term:";_messages["psx.common.daynamesshort_mon"] = "Mon";_messages["psx.common.daynames_fri"] = "Friday";_messages["psx.common.daynamesletter_fri"] = "F";_messages["psx.common.school"] = "School:";_messages["psx.common.monthnames_sep"] = "September";_messages["psx.common.daynames_sun"] = "Sunday";_messages["psx.common.daynames_sat"] = "Saturday";_messages["psx.common.daynamesletter_sat"] = "S";_messages["psx.common.monthnames_oct"] = "October";_messages["psx.common.daynamesletter_sun"] = "S";_messages["psx.common.monthnames_nov"] = "November";_messages["psx.common.scheduling_year"] = "Scheduling Year";_messages["psx.common.monthnames_mar"] = "March";_messages["psx.common.monthnames_may"] = "May";_messages["psx.common.capital_email"] = "Email";_messages["psx.common.daynames_mon"] = "Monday";_messages["psx.common.welcome"] = "Welcome,";_messages["psx.common.data_dictionary"] = "Data Dictionary";_messages["psx.common.monthnames_jul"] = "July";_messages["psx.common.monthnames_jun"] = "June";_messages["psx.common.daynamesmin_fri"] = "Fr";_messages["psx.common.daynamesletter_mon"] = "M";_messages["psx.common.monthnames_jan"] = "January";_messages["psx.common.system_help_title"] = "System Help";_messages["psx.common.state_reporting_help_title"] = "State Reporting Help";_messages["psx.common.daynamesmin_mon"] = "Mo";_messages["psx.common.district"] = "District Office";_messages["psx.common.monthnames_feb"] = "February";_messages["psx.common.daynames_wed"] = "Wednesday";_messages["psx.common.monthnames_dec"] = "December";_messages["psx.common.daynamesletter_tue"] = "T";_messages["psx.common.daynamesletter_thu"] = "H";_messages["psx.common.daynamesletter_wed"] = "W";_messages["psx.common.daynames_tue"] = "Tuesday";_messages["psx.common.monthnames_aug"] = "August";_messages["psx.common.monthnames_apr"] = "April";_messages["psx.common.daynames_thu"] = "Thursday";_messages["psx.common.system_help"] = "System Help";_messages["psx.common.school_title"] = "Change School";_messages["psx.common.data_dictionary_title"] = "Data Dictionary";_messages["psx.common.monthnamesshort_dec"] = "Dec";_messages["psx.common.daynamesshort_tue"] = "Tue";_messages["psx.common.daynamesshort_thu"] = "Thu";_messages["psx.common.term_title"] = "Change Term";_messages["psx.common.daynamesshort_sun"] = "Sun";_messages["psx.common.daynamesshort_sat"] = "Sat";_messages["psx.common.monthnamesshort_feb"] = "Feb";_messages["psx.common.powerschool"] = "PowerSchool";_messages["psx.common.daynamesshort_wed"] = "Wed";_messages["psx.common.monthnamesshort_aug"] = "Aug";_messages["psx.common.monthnamesshort_apr"] = "Apr";_messages["psx.common.help_title"] = "Help";_messages["psx.common.provincial_reporting_help_title"] = "Provincial Reporting Help";_messages["psx.common.district_abbreviation"] = "District";_messages["psx.common.sign_out"] = "Sign Out";_messages["psx.common.email"] = "email";_messages["psx.common.monthnamesshort_sep"] = "Sep";_messages["psx.common.sign_in_title"] = "Sign In";_messages["psx.common.monthnamesshort_mar"] = "Mar";_messages["psx.common.monthnamesshort_may"] = "May";_messages["psx.common.monthnamesshort_oct"] = "Oct";_messages["psx.common.loading"] = "Loading...";_messages["psx.common.monthnamesshort_nov"] = "Nov";_messages["psx.common.general.problem"] = "Unable to process the request.  Please contact your system administrator to review logs.";_messages["psx.common.print_title"] = "Print this page";_messages["psx.common.monthnamesshort_jul"] = "Jul";_messages["psx.common.monthnamesshort_jun"] = "Jun";_messages["psx.common.monthnamesshort_jan"] = "Jan";_messages["psx.common.changes_recorded"] = "The changes have been recorded.";_messages["psx.common.sign_out_title"] = "Sign Out";_messages["psx.common.state_reporting_help"] = "State Reporting Help";_messages["psx.common.settings"] = "Settings";_messages["psx.common.provincial_reporting_help"] = "Provincial Reporting Help";_messages["psx.common.sign_in"] = "Sign In";_messages["psx.common.copyright"] = "Copyright &copy; 2005-2019 PowerSchool Group LLC and/or its affiliate(s). All rights reserved.<br/>All trademarks are either owned or licensed by PowerSchool Group LLC and/or its affiliates.";_messages["psx.common.help"] = "Help";_messages["psx.common.translate_page_title"] = "Localize Page";if (typeof pss_text != 'function') { function pss_text(key, params, returnKeyIfNotFound) { if (_messages[key] === undefined) { if (returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true) {return key;} else {return 'String key was not found!'; }}if(params == null || params.length == 0) {return _messages[key]; }else { msg = _messages[key]; for ( i = 0; i < params.length; i++) {token = "{"+i+"}"; msg = msg.replace(token, params[i]); }return msg;} } }</script>
+<script type='text/javascript'>if(!_messages)var _messages = {};_messages["psx.js.scripts.psbehaviors.closetext"] = "Done";_messages["psx.js.scripts.psbehaviors.off"] = "Off";_messages["psx.js.scripts.psbehaviors.prevtext"] = "Prev";_messages["psx.js.scripts.psbehaviors.currenttext"] = "Today";_messages["psx.js.scripts.psbehaviors.add_issue_comment"] = "Add Issue Comment";_messages["psx.js.scripts.psbehaviors.yes"] = "Yes";_messages["psx.js.scripts.psbehaviors.about_n_characters_left"] = "Approximately {0} characters left";_messages["psx.js.scripts.psbehaviors.on"] = "On";_messages["psx.js.scripts.psbehaviors.or"] = "or";_messages["psx.js.scripts.psbehaviors.no"] = "No";_messages["psx.js.scripts.psbehaviors.noaccess"] = "No Field Access";_messages["psx.js.scripts.psbehaviors.time_entry"] = "Time Entry";_messages["psx.js.scripts.psbehaviors.hide_header"] = "Hide Header";_messages["psx.js.scripts.psbehaviors.added"] = "Added";_messages["psx.js.scripts.psbehaviors.change_date"] = "Change Date";_messages["psx.js.scripts.psbehaviors.hide_main_menu"] = "Hide Main Menu";_messages["psx.js.scripts.psbehaviors.wizprevious"] = "Previous";_messages["psx.js.scripts.psbehaviors.recording_start"] = "Start Recording";_messages["psx.js.scripts.psbehaviors.recording_stop"] = "Finish Recording";_messages["psx.js.scripts.psbehaviors.confirm_delete"] = "Confirm Delete";_messages["psx.js.scripts.psbehaviors.icons"] = "Icons";_messages["psx.js.scripts.psbehaviors.cancel"] = "Cancel";_messages["psx.js.scripts.psbehaviors.time_entry_x"] = "Time Entry ({0})";_messages["psx.js.scripts.psbehaviors.recording_cancel"] = "Cancel Recording";_messages["psx.js.scripts.psbehaviors.show_header"] = "Show Header";_messages["psx.js.scripts.psbehaviors.interval_thirty"] = "30 minute interval";_messages["psx.js.scripts.psbehaviors.restore_selections_school_and_term"] = "Restore Selection(s), School and Term";_messages["psx.js.scripts.psbehaviors.interval_hour"] = "hour only interval";_messages["psx.js.scripts.psbehaviors.time_icon"] = "Time Entry Icon";_messages["psx.js.scripts.psbehaviors.deleted"] = "Deleted";_messages["psx.js.scripts.psbehaviors.date_entry"] = "Date Entry";_messages["psx.js.scripts.psbehaviors.nexttext"] = "Next";_messages["psx.js.scripts.psbehaviors.show_main_menu"] = "Show Main Menu";_messages["psx.js.scripts.psbehaviors.report_an_issue"] = "Report an Issue";_messages["psx.js.scripts.psbehaviors.legend"] = "Legend";_messages["psx.js.scripts.psbehaviors.no_match_found"] = "No match found";_messages["psx.js.scripts.psbehaviors.reload_last_page"] = "Reload Last Page";_messages["psx.js.scripts.psbehaviors.would_you_like_to_reload_the_last_page_you_were_viewing"] = "Your session timed out due to inactivity. Would you like to restore your previous session and reload the last page you were viewing?";_messages["psx.js.scripts.psbehaviors.n_characters_left"] = "{0} characters left";_messages["psx.js.scripts.psbehaviors.main_navigation"] = "Main Navigation";_messages["psx.js.scripts.psbehaviors.deleted_xx"] = "Deleted: {0}";_messages["psx.js.scripts.psbehaviors.wizstep"] = "Step";_messages["psx.js.scripts.psbehaviors.confirmbanner.schoolstaff_removed"] = "The previously selected staff member was successfully removed from this school.";_messages["psx.js.scripts.psbehaviors.required"] = "Required Field";_messages["psx.js.scripts.psbehaviors.delete"] = "Delete";_messages["psx.js.scripts.psbehaviors.confirm"] = "Confirm ";_messages["psx.js.scripts.psbehaviors.added_xx"] = "Added: {0}";_messages["psx.js.scripts.psbehaviors.wiznext"] = "Next";_messages["psx.js.scripts.psbehaviors.interval_five"] = "5 minute interval";_messages["psx.js.scripts.psbehaviors.asterisk"] = "An asterisk indicates that classes for the term are hidden from parents/students in the PowerSchool Student and Parent portal and PowerSchool Mobile app.";_messages["psx.js.scripts.psbehaviors.calendar_icon"] = "Date Entry Icon";_messages["psx.js.scripts.psbehaviors.enrollment_alert"] = "The student you are attempting to enroll has an existing record in the district. Click OK, then proceed to transfer the student to your school if necessary.";_messages["psx.js.scripts.psbehaviors.would_you_like_to_restore_your_selections_school_and_term"] = "Your session timed out due to inactivity. Would you like to restore your previous session and return to the last used school, term, student and/or teacher selection?";_messages["psx.js.scripts.psbehaviors.interval_fifteen"] = "15 minute interval";_messages["psx.js.scripts.psbehaviors.send_report"] = "Report Issue";if (typeof pss_text != 'function') { function pss_text(key, params, returnKeyIfNotFound) { if (_messages[key] === undefined) { if (returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true) {return key;} else {return 'String key was not found!'; }}if(params == null || params.length == 0) {return _messages[key]; }else { msg = _messages[key]; for ( i = 0; i < params.length; i++) {token = "{"+i+"}"; msg = msg.replace(token, params[i]); }return msg;} } }</script>
+
+
+	<script src="/scripts/jquery-2.1.3.min.js"></script>
+	<script src="/scripts/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/scripts/jquery-migrate-ps.js"></script>
+	<script src="/scripts/jquery-ui-1.11.2.custom.min.js"></script>
+    <script src="/scripts/requirejs/require.js"></script>
+
+
+<!--[if lt IE 7]><script>jQuery('html').data('ltie', 7.addClass('ltie7');;</script><![endif]-->
+<!--[if lt IE 8]<script>jQuery('html').data('ltie', 8).addClass('ltie8');;</script><![endif]-->
+<!--[if lt IE 9]><script>jQuery('html').data('ltie', 9).addClass('ltie9');</script><![endif]-->
+<script type="text/javascript" >
+  var feedbackEnabled = false;
+  var recordingActivated = false;
+</script>
+<script src="/scripts/psDialog.js"></script>
+
+<script type="text/javascript">
+/**
+ * Need to configure require js before psbehaviors.
+ */
+require.config({
+        waitSeconds: 0,
+    	baseUrl: "/scripts/",
+    	paths: {
+    		'handlebars':                'handlebars/require-handlebars.1.0.0.rc3',
+    		'json2':                     'handlebars/json2',
+    		'hbs':                       'hbs/0.4.0/hbs',
+    		'underscore':                'underscore/underscore-'+'min'+'-1.8.3',
+    		'backbone':                  'backbone/backbone-'+'min'+'-0.9.10',
+    		'jquery.cookie':             'jquery.cookie',
+    		'psDateValidate':            'psDateValidate',
+    		'psDateWidget':              'psDateWidget',
+    		'psDirtyStateController':    'psDirtyStateController',
+    		'psFormValidate':            'psFormValidate',
+    		'psNumWidget':               'psNumWidget',
+    		'psReloader/psReloader-min': 'psReloader/psReloader-min',
+    		'psRequired':                'psRequired',
+    		'psTextWidget':              'psTextWidget',
+    		'psValidationFunctions':     'psValidationFunctions',
+            'angular':                   'lib/angular/angular.min',
+            'angular-cookies':           'lib/angular/angular-cookies.min',
+            'angular-route':             'lib/angular/angular-route.min',
+            'angular-sanitize':          'lib/angular/angular-sanitize.min',
+            'angular-translate':         'lib/angular/angular-translate.min',
+            'angular-messages':          'lib/angular/angular-messages.min',
+            'angular-aria':              'lib/angular/angular-aria.min',
+            'angular-resource':      	 'lib/angular/angular-resource.min',
+            'encoding':               	 'lib/textencoder/encoding',
+            'filesaver':                 'lib/filesaver/FileSaver.min'
+        },
+
+        hbs: {
+            disableI18n: true
+        },
+
+        shim: {
+            'underscore': {
+                exports: '_'
+            },
+            'backbone': {
+                exports: 'Backbone',
+                deps: ['underscore']
+            },
+            'angular': {
+                exports: 'angular'
+            },
+            'angular-translate':{
+                deps: ['angular']
+            },
+            'angular-sanitize':{
+                deps: ['angular']
+            },
+            'angular-route':{
+                deps: ['angular']
+            },
+            'angular-cookies':{
+                deps: ['angular']
+            },
+            'angular-messages':{
+                deps: ['angular']
+            },
+            'angular-aria':{
+                deps: ['angular']
+            },
+            'angular-resource': {
+                deps: ['angular']
+            }
+        },
+
+        map: {
+            '*': {
+                'Handlebars': 'handlebars'
+            }
+        },
+        priority: [
+              'angular'
+        ]    });
+define('jquery', function () {
+	return jQuery;
+});
+define('jquery-ui', ['jquery'], function($) {
+	return $.ui;
+});
+</script>
+
+<script src="/scripts/psbehaviors.js"></script>
+<script src="/scripts/helpLinksMenu.js"></script>
+<script src="/scripts/keep-alive.js"></script>
+
+
+<!-- Frame type=none --><meta id="keep-alive-config" content="60"/>
+
+<script type="text/javascript">
+
+/**
+ * Set the page's locale via a request_locale URL parameter. If there is already a URL parameter by
+ * this name, then substitute it with the passed-in locale. NOTE: This function will actually cause the page
+ * to be re-submitted with the new locale, so it really should not be used with pages submitted via POST
+ * requests (if there are any, which I hope there are not).
+ * @param locale the locale to set (e.g. en_US)
+ */
+function setPageLocale (locale) {
+  var c=String (window.location);
+  var rlpos = c.indexOf("request_locale=");
+  var afterPart = "";
+  if (rlpos > 0) {
+    var afterBegin = c.indexOf("&", rlpos);
+    if (afterBegin > 0) {
+      afterPart = c.substring(afterBegin);
+    }
+    c = c.substring(0, rlpos-1);
+  }
+  var s=(c.indexOf('?') > 0 ? '&' : '?');
+  var np = c + s + 'request_locale=' + locale + afterPart;
+  window.location = np;
+}
+
+function get_locale() {
+  return "en_US";
+}
+
+function checkForPTMURL() {
+	if ($j && $j.cookie && $j.cookie('PTM_URL')!=null 
+		&& window.location!=$j.cookie('PTM_URL')
+		&& !window.location.href.match("/teachers/pw.html") ) {
+			var path = $j.cookie('PTM_URL');
+			$j.cookie('PTM_URL',null, { path: '/', expires: -1 });
+			window.location.replace(path);
+	}
+}
+
+
+if(typeof pss_text!='function'){
+function pss_text(key, params, returnKeyIfNotFound) {
+	if (_messages[key] === undefined)
+	{
+		if (returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true) {
+			return key;
+		} else {
+			return "String key was not found!";
+		}
+	}
+	if(params == null || params.length == 0)
+	{
+  		return _messages[key];
+	}
+	else
+	{
+		msg = _messages[key];
+		for ( i = 0; i < params.length; i++)
+		{
+			token = "{"+i+"}";
+			msg = msg.replace(token, params[i]);
+		}
+		return msg;
+	}
+}
+}
+
+function get_localized_date(d, fmt) {
+   if (fmt === "mmdd") return ("" + (d.getMonth()+1) + "/" + d.getDate() + "");
+   return ("" + (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear() + "");
+}
+
+
+// Format is a formatting object
+// number is number object
+function formatNumber(format, number)
+{
+	var ds = format.ds; // decimal separator
+	var result = "";
+
+	if (isNaN(number) == true)
+	{
+		return number
+	}
+	else
+	{
+		result = number.toString();
+		result = result.replace(".",ds);
+		return result;
+	}
+}
+
+function localizeNumber(number)
+{
+	return formatNumber(get_numeric_format(), number);
+}
+
+function deLocalizeNumber(number) {
+	return removeNumberFormat(get_numeric_format(), number);
+}
+
+function removeNumberFormat(format, number) {
+	// IE does not like instantiating RegExp objects with empty values, so we have to
+	// check for valid values in the grouping separator before using it in a RegExp.
+	var gsNotBlank = (format.gs == "." || format.gs == "," || format.gs == " ");
+	number = number.toString();
+	// We also want to check that only valid characters are present.
+	var regexString = "^" + format.regex + "$";
+	var validNumber = new RegExp(regexString, "g");
+	if (number != "" && number.match(validNumber) != null) {
+		if (gsNotBlank) {
+			var gs = new RegExp("\\"+format.gs, "g");
+			number = number.replace(gs, "")
+		}
+		var ds = new RegExp("\\"+format.ds, "g"); //The decimal separator is not expected to be empty
+		number = parseFloat(number.replace(ds, "."));
+	} else {
+		return null;
+	}
+	return (isNaN(number)) ? null : number;
+}
+
+function localizeCurrency(number)
+{
+	return formatNumber(get_currency_format(), number);
+}
+
+<!-- This function return a json object with numeric formatting info -->
+function get_numeric_format() {
+   return  { format: '#,##0.#########', 
+ size: '3', 
+ gs: ',', 
+ ds: '.', 
+ regex: '([-]?(([0-9]{1,3}(,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)|([0-9]*(\\.[0-9]+)?)))' }; 
+;
+}
+
+<!-- This function return a json object with currency formating info -->
+function get_currency_format() {
+   return  { format: '#,##0.00', 
+ size: '3', 
+ gs: ',', 
+ ds: '.', 
+ regex: '([-]?(([0-9]{1,3}(,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)|([0-9]*(\\.[0-9]+)?)))' }; 
+;
+}
+
+<!-- This function return date format in machine readable form -->
+function get_short_date_format() {
+   return "M/d/yy";
+}
+<!-- This function return date format in machine readable form -->
+function get_date_format() {
+   return "MM/dd/yyyy";
+}
+
+<!-- This function return date format in human readable form -->
+function get_date_text(){
+  	return "MM/DD/YYYY";
+}
+<!-- This function return date format in human readable form -->
+function get_short_date_text(){
+	return "MM/DD/YY";
+}
+
+<!-- This function return time format in machine readable form without seconds-->
+function get_HHMMTime_format() {
+   return "hh:mm a";
+}
+
+<!-- This function return time format in machine readable form with seconds-->
+function get_HHMMSSTime_format() {
+   return "hh:mm:ss a";
+}
+
+<!-- This function return ante/post meridian in machine readable form -->
+function get_AMPM(ampm) {
+	if(ampm == "am")
+   		return "AM";
+   	else
+   		return "PM";
+}
+
+if(!_messages) var _messages = {};
+/**
+ * Get texts from the server based on a prefix.
+ * @param prefix the prefix to use
+ * @param onlyIfNotPresent (optional) if passed, check to see if message is present yet; only fetch the
+ *   texts from the server if this key is not present
+ */
+function pss_get_texts(prefix, onlyIfNotPresent) {
+  if (onlyIfNotPresent && _messages[onlyIfNotPresent]) return;
+
+  jQuery.ajax ({async: false,
+    url:'/getMessages.action',
+    data:{prefix: prefix, locale: get_locale()},
+    dataType:'json',
+    success: function (msgs) {
+      jQuery.each(msgs, function (key, value) {
+        _messages[key] = value;
+      });
+    }
+  });
+}
+
+function alertwindow (directory, alerttype, frn) {
+	w = window.open("/"+directory+"/alerts/"+alerttype+"alert.html?frn="+frn, "alert", "toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes,width=350,height=250");
+}
+
+function helpwindow (url) {
+	w = window.open(url, "help", "toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes,width=570,height=500");
+}
+
+function helptext (text) {
+	window.status = text;
+	return true;
+}
+
+function openSpecialWeighting(opener) {
+var path = "";
+if (opener == "admin"){
+		path = "/admin/students/specialweighting.html";
+	}else if (opener == "parent"){
+		path = "/guardian/specialweighting.html";
+	}else if (opener == "teacher"){
+		path = "/teachers/studentpages/specialweighting.html";
+	}
+	window.open(path, 'Weighting', 'width=500,height=425,menu=no,toolbar=no,location=no,scrollbars=yes');
+
+}
+
+function openScaleTranslation() {
+	var path="/admin/stdconversiontable/scaletranslation.html";
+	window.open(path, 'Scale_Translation', 'width=500,height=425,menu=no,toolbar=no,location=no,scrollbars=yes,resizable=1');
+}
+
+function alertcommentwindow(studentid, sectionid, asmtid) {
+	window.open("scorecomment.html?ac=scorecomment&studentid=" + studentid + "&sectionid=" + sectionid + "&asmtid=" + asmtid, "Score", "toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes,width=480,height=480");
+}
+
+function feedbackwindow () {
+	window.showModalDialog('/getFeedback.action','send_feedback','dialogWidth:640px; dialogHeight:500px; scroll:no;');
+}
+
+function $(id) {
+	return document.getElementById(id);
+}
+
+//line breaks are 2 chracters on the backend (\r\n)
+//IE treats them as 2 already but FF and Safari treat them
+//as one (\n only). This will ensure all browsers are counting line
+//breaks as 2
+// This function is duplicated in muliple locations. Updating one requires
+// updating all of them. They are located under
+// web_root/wildcards/commonscripts.txt
+// web_root/scripts/commonscripts.js
+// sis/web/srv/views/psxdecorators/commonscripts.ftl
+function realLength(str) {
+	if (!str)
+		return 0;
+
+	//replace \r with empty string (this will only be matched on IE)
+	var temp = str.replace(/\r/g, "");
+
+	//find all occurances of newlines (\n)
+	var lns = temp.match(/\n/g);
+
+	if (lns)
+		//if we had any newlines, do this hokie pokie to consistently count them as two
+		return temp.length + lns.length;
+	else
+		//else no newlines, we can just use the strings actual length
+		return str.length;
+}
+
+
+// trim function that truncates off the end of stringCopy until the string is less than
+// maxlimit. Treats any new line (\n or \r\n) as two characters when trimmed
+// off the end.
+// stringCount should be calcuated by the function realLength. The value is either the
+// length of stringCopy in chracters if isUnicode == false, or the length in bytes
+// if isUnicode == true.
+// This function is duplicated in muliple locations. Updating one requires
+// updating all of them. They are located under
+// web_root/wildcards/commonscripts.txt
+// web_root/scripts/commonscripts.js
+// sis/web/srv/views/psxdecorators/commonscripts.ftl
+function trimToSize (stringCopy, stringCount, maxlimit, isUnicode) {
+
+	var last_char;
+	var secondToLast_char;
+	var curval = stringCopy;
+	var unicodeEscaped;
+	var unicodeCharLength;
+	for (; stringCount > maxlimit; ) {
+		//get the last char in the string
+		last_char = curval.charAt(curval.length-1);
+		if (last_char == '\n') {
+			//check if the second to last is a \r and yank that too
+			secondToLast_char = curval.charAt(curval.length-2);
+
+			if (secondToLast_char == '\r') {
+				curval = curval.substring(0, curval.length-2);
+			}
+			else {
+				curval = curval.substring(0, curval.length-1);
+			}
+			//line breaks need to be handled as 2 characters
+			stringCount = stringCount - 2;
+		}
+		else {
+			//character, pull it
+			//figure out how many units to decriment the count by
+			if (isUnicode) {
+				unicodeEscaped = unescape( encodeURIComponent( last_char ) );
+				unicodeCharLength = unicodeEscaped.length;
+				stringCount = stringCount - unicodeCharLength;
+			}
+			else {
+				stringCount = stringCount - 1;
+			}
+
+
+			curval = curval.substring(0, curval.length-1);
+		}
+
+	}
+	// All done, field data is cut down to size. Save it.
+	return curval;
+
+
+}
+
+// This function is duplicated in muliple locations. Updating one requires
+// updating all of them. They are located under
+// web_root/wildcards/commonscripts.txt
+// web_root/scripts/commonscripts.js
+// sis/web/srv/views/psxdecorators/commonscripts.ftl
+function maxlength( field, maxlimit, leftCountSpan ) {
+	var ret = true;
+	var scrollDown = false;
+	var characterCount = realLength(field.value);
+	var stringCopy;
+	var isUnicode;
+	var hasChanged = false;
+
+	// Check max field length. Now modified to also take Oracle 4000B limit into account.
+    if ( characterCount > maxlimit ) {
+      	stringCopy = field.value;
+      	isUnicode = false;
+      	field.value = trimToSize (stringCopy, characterCount, maxlimit, isUnicode);
+
+		characterCount = realLength(field.value); //update the charCount since we've altered the string
+        scrollDown = true;
+        ret = false;
+        hasChanged = true;
+    }
+
+    var utf8 = unescape( encodeURIComponent( field.value ) );
+    var unicodeCharacterCount = realLength(utf8);
+    if (unicodeCharacterCount > 4000) {
+      stringCopy = field.value;
+      isUnicode = true;
+      var maxBytes = 4000;
+      field.value = trimToSize(stringCopy, unicodeCharacterCount, maxBytes, isUnicode);
+
+      characterCount = realLength(field.value); //update the charCount since we've altered the string
+      utf8 = unescape( encodeURIComponent( field.value ) );
+      unicodeCharacterCount = realLength(utf8); //update the unicodeCharCount since we've altered the string
+      ret = false;
+      scrollDown = true;
+      hasChanged = true;
+    }
+
+    if (scrollDown) {
+        field.scrollTop = field.scrollHeight;
+    }
+
+    // Find # left if caller wants to know
+	if (leftCountSpan) {
+	    var left1 = maxlimit - characterCount;
+		var left2 = 4000 - unicodeCharacterCount;
+		var left = (left1 < left2 ? left1 : left2);
+
+		$j("#"+leftCountSpan).html(left);
+    }
+
+    if(hasChanged) {
+        $j(field).trigger('change');
+    }
+    return ret;
+}
+
+function noNumbers(e) {
+    var keynum, keychar, numcheck;
+    if(window.event) keynum = e.keyCode; // IE
+    else if(e.which) keynum = e.which; // Netscape/Firefox/Opera
+    keychar = String.fromCharCode(keynum);
+    numcheck = /\d/;
+    return !numcheck.test(keychar);
+}
+
+function onlyNumbers(e) {
+    return !noNumbers(e);
+}
+
+function decodeText(text) {
+	return $j("<div/>").html(text).text();
+}
+
+var changeHistoryPayload = null;
+/**
+ * Creates the change history payload object if it doesn't already exist. Otherwise, it updates the existing object's context. 
+ */
+function createOrUpdateChangeHistoryPayload(context) {
+	if (changeHistoryPayload !== null) {
+		changeHistoryPayload.context = context;
+	} else {
+	    changeHistoryPayload = {
+	        context: context,
+	        columns: []
+	    };
+	}
+}
+
+/**
+ * Adds or replaces a key column on a payload object. If the table name and column match one that is already present,
+ * the existing value is replaced.
+ */
+function setChangeHistoryColumn(tableName, columnName, value) {
+	if (changeHistoryPayload !== null && tableName && columnName) {
+		var list = changeHistoryPayload.columns;
+		if (list && Array.isArray(list)) {
+			var doAdd = true;
+			for (var i = 0; i < list.length; i++) {
+				var next = list[i];
+				if (next.table_name.toUpperCase() === tableName.toUpperCase() && next.column_name.toUpperCase() == columnName.toUpperCase()) {
+					next.column_value = value;
+					doAdd = false;
+					break;
+				}
+			}
+			if (doAdd) {
+				list.push({
+					table_name: tableName,
+					column_name: columnName,
+					column_value: value
+				});
+			}
+		}
+	}
+}
+
+/**
+ * Adds or replaces a set of options to be used to set a key column value. The column must first be created using setChangeHistoryColumn. Note that the column value will be made null.
+ * tableName: The table name of the corresponding key column.
+ * columnName: The column name of the corresponding key column.
+ * label: The label to display in the UI for the select list. Localization should be done before passing in.
+ * options: Array of options to display. Each object should have a name (for display) and value (for posting).
+ * copyToColumns: Option array of arrays on which the selected value should be copied. Each array should have a column_name and column_value that corresponds to another key column.
+ */
+function addChangeHistoryColumnOptions(tableName, columnName, label, options, copyToColumns) {
+	if (changeHistoryPayload !== null && tableName && columnName && options) {
+		var list = changeHistoryPayload.columns;
+		if (list && Array.isArray(list)) {
+			for (var i = 0; i < list.length; i++) {
+				var next = list[i];
+				if (next.table_name.toUpperCase() === tableName.toUpperCase() && next.column_name.toUpperCase() == columnName.toUpperCase()) {
+					next.column_value = null;
+					next.column_option_label = label || columnName;
+					next.column_options = options;
+					next.copy_to_columns = copyToColumns;
+					break;
+				}
+			}
+		}
+	}
+}
+
+</script>
+
+<script type="application/x-javascript">
+addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+function hideURLbar(){
+window.scrollTo(0,1);
+}
+</script>
+
+
+
+<!-- iPhone Scripts introduced for parent access -->
+<script type='text/javascript'>if(!_messages)var _messages = {};_messages["psx.js.admin_javascript.validate_date.month_1"] = "Month ";_messages["psx.js.admin_javascript.validate_date._doesnt_have_31_days"] = " doesn't have 31 days.";_messages["psx.js.admin_javascript.validate_date._doesnt_have_"] = " doesn't have ";_messages["psx.js.admin_javascript.validate_date.month_must_be_between_1_and_12"] = "Month must be between 1 and 12.";_messages["psx.js.admin_javascript.validate_date.date_format_must_be"] = "Date format must be ({0}).";_messages["psx.js.admin_javascript.validate_date.day_must_be_between_1_and_31"] = "Day must be between 1 and 31.";_messages["psx.js.admin_javascript.validate_date._days"] = " days.";_messages["psx.js.admin_javascript.validate_date.february_"] = "February ";if (typeof pss_text != 'function') { function pss_text(key, params, returnKeyIfNotFound) { if (_messages[key] === undefined) { if (returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true) {return key;} else {return 'String key was not found!'; }}if(params == null || params.length == 0) {return _messages[key]; }else { msg = _messages[key]; for ( i = 0; i < params.length; i++) {token = "{"+i+"}"; msg = msg.replace(token, params[i]); }return msg;} } }</script>
+<script language="JavaScript" type="text/javascript" src="/admin/JavaScript/validate_date.js"></script>
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+
+<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="PowerSchool"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
+<link rel="shortcut icon" href="/favicon.ico" >
+
+
+<link href="/images/css/screen.css" rel="stylesheet" media="screen">
+<link href="/images/css/print.css" rel="stylesheet" media="print">
+
+<!-- **************************** DDSB MODIFICATION ***************************** -->
+<!-- ------------ Line added to reference new document sortable.js  ------------- -->
+<!-- ------------   which enables sorting a table by any column     ------------- -->
+
+<script src="/admin/javascript/sorttable.js"></script>
+
+<!-- **************************************************************************** -->
+
+</head>
+
+<body>
+
+
+<!-- start of shell for entire page  -->
+ 
+<div id="container" class="group">
+	<!-- start of shell for entire page  -->
+	<!-- logo, school, term, logoff, help -->
+	<div id="header" class="group" role="header">
+		<ul id="tools" class="group">
+	      <li id="userName" title=" (Last Sign In:&nbsp;02/27/2020 at 09:26 AM timed out. 192.168.230.43)">Welcome, <span>Carolyn Allen</span></li>
+		  <li><a href="#" id="btnHelp" class="comphelppopup" title="Help"> Help</a>
+<span id="btnHelpPlusCompliance" class="comphelppopuptext">
+    <div class="comphelppopupHeader">Help</div>
+    <div class="comphelppopupLines systemHelp">
+
+<!-- ******************************* DDSB MODIFICATION ******************************* -->
+<!-- --- JAS: DEC/05/2019: Added link to DDSB Help                                 --- -->
+        <a href="/admin/ddsb/ddsb_help/ddsb_help.html" id="btnDDSBHelp" title="DDSB Help" accesskey="?" target="_blank">&nbsp;DDSB Help</a> 
+     <div class="comphelppopupLines">
+<!-- ********************************************************************************* -->
+    
+        <a href="https://docs.powerschool.com/PSHSA" id="btnSystemHelp" title="System Help" accesskey="?" target="_blank">System Help</a>
+    </div>
+    
+<!-- ******************************* DDSB MODIFICATION ******************************* -->
+<!-- --- JAS: FEB/14/2019: Modified to show Data Dictionary to Administrators only --- -->
+
+<!-- ********************************************************************************* -->
+
+    <div class="comphelppopupLines">
+        <a href="https://docs.powerschool.com/CANON" id="btnComplianceHelp" title="Provincial Reporting Help" accesskey="?" target="_blank">Provincial Reporting Help</a>
+    </div>
+</span>
+
+</li>
+		  <li><a href="~loff" id="btnLogout" target="_top" title="Sign Out" accesskey="l">Sign Out</a></li>
+		</ul>
+	    <div id="branding-powerschool">
+	    	<a href="/admin/home.html" target="_top">&nbsp;</a>
+	    </div>
+	    		<div id="currentscope" data-ng-controller="schoolSearchController" data-require-path="angular,components/schoolsearch/index" data-module-name="schoolSearchModule" data-bootstrap-local="true">
+			<span id="schoolSearchSpan">
+				<input type="hidden" id="currSchoolId" value="261"/>
+				<a href="javascript:;" data-ng-click="showSchoolSearch()" id="schoolContext" title="Change School" >School: </a>
+				<span id="schoolText" data-ng-hide="ctrlData.showSearch">Uxbridge S.S.</span>
+				<span class="hide" data-ng-show="ctrlData.showSearch"
+					id="schoolSearchField"
+	                name="schoolSearchField"
+	                type="text"
+	                angucomplete-alt
+	                selected-object="schoolSelected"
+	                input-class="schoolSearchInput"
+	                title-field="name,abbreviation"
+	                description-field="description"
+	                pause="400"
+	                minlength="0"
+	                match-class="highlight"
+	                auto-match="true"
+	                match-field="name,school_number,abbreviation"
+	                remote-api-handler="typeAheadSearch"
+	                remote-url-response-formatter="formatResponse"
+	                focus-out="searchFocusOut()"
+	                focus-first="true">
+				</span>
+			</span>
+			<span id="changeTermSpan">
+				<a href="/admin/terms/changetermcontext.html" id="termContext" class="replaceNext" title="Change Term" >Term: </a>
+				<span id="termText">19/20 Semester 2</span>
+			</span>
+	    </div>
+
+		<div id="cust-content-header"></div>
+	</div>
+	<!--logo, school, term, logoff, help -->
+
+<!-- ----------- Customization to change context bar colour based on year ------------- -->
+<!-- ----- No change for current year, Red for prior year, Green for future years ----- -->
+
+<!-- <div id="usercontext-bar" role="banner">                                           -->
+
+
+    <div id="usercontext-bar" role="banner">
+
+
+
+
+
+
+
+
+<!-- ********************************************************************************** -->
+	<a href="/admin/home.html" id="linkBrandingHome" target="_top"></a>
+	<div id="breadcrumbs">
+	<!--Breadcrumbs in page, close in admin-navigation wc-->
+<!-- breadcrumb start --><a href="/admin/home.html" target="_top">Start Page</a> &gt; Master Schedule List By Course<!-- breadcrumb end -->
+</div>
+<!--end BC tag-->
+
+	<ul id="tools2">
+		
+
+<li id="link-icon-btn-pluginLinkListHeader" class="icon-btn-pluginLinkList">
+    <a id="link-icon-btn-pluginLinkList" href="#" title="Applications" onclick="toggleDrawerPanel('pluginLinkDrawerPanel', 'pluginLinkDrawerModalOverlay', 'expanded'); return false;">&nbsp;<span class="screen_readers_only">Applications</span></a>
+</li>
+
+        
+
+		 <li id="notifIcon"><a href="/admin/studentmobility/notifDetailAJAX.action" onclick="return false;" target="_top" id="btnNotifications" class="dialogC"><em class="screen_readers_only">Notifications</em>&nbsp;</a></li>
+		<li id="icon-btn-report" class="inactive"><a href="/admin/reportqueue/prhome.html" target="_top" title="Report Queue">&nbsp;</a></li>
+		<li class="icon-btn-print"><a href="javascript:window.print()"  id="btnPrint" title="Print this page">&nbsp;</a></li>
+    </ul>
+</div>
+<!--end usercontext bar-->
+
+<!-- start of main menu and content -->
+<!-- JM 2020-02-03: Removed closing div tag for div id="content". 
+        Div had no content as it was closing prior to content load. -->
+<div id="content" class="group">
+<!-- **************************************** DDSB MODIFICATION *********************************** -->
+<!-- ----------------- JAS: JUL/19/2018: ADD CODE TO START SAFE ARRIVAL AUTOSEND  ----------------- --> 
+<!-- Show pointer when hovering "Send Safe Arrival Data" link                                       -->
+<!-- Show spinner when the link is clicked                                                          -->
+<!-- In Firefox, :active not working, always show spinner                                           -->
+<style>
+  #new_link:hover { 
+    cursor : pointer;
+  }
+  #new_link:active {
+    cursor : wait;
+  }
+ /* @-moz-document url-prefix() {
+    #new_link { 
+      cursor : wait  !important;
+    }
+  }*/
+</style>
+
+<!--ENP:2018-11-01 Changed to Ajax call to avoid error on permanently stored grades-->
+<script>
+
+// Run autosend for Safe Arrival Attendance info
+    function fncSendSafeArrival (callback) {
+      var frn ='File not found';
+      var reply;
+      $j.ajax({
+          url: "/../../admin/ddsb/ddsb_tools/ddsb_autosend_safearrival.html",
+          dataType: 'json',
+          async:   false,
+          cache: false,
+          success: function(data){
+            frn = data[0].frn;
+            }
+        });
+      if (frn == 'File not found') {
+        alert('No Safe Arrival Attendance autocomm was found for this school');
+      }else {
+        var reply = confirm('Safe Arrival data send has been initiated!'
+                + '\n\nPlease click OK to continue OR CANCEL to quit');
+        if (reply == true) {
+          // Start Safe Arrival autosend
+          $j.ajax({
+            url: "/../admin/tech/autosend/home.html?ac=autocommmanual&frn="+frn,
+            async:   false,
+            cache: false,
+            success: function(response) {
+               callback(response);
+            }
+          }); 
+        } else {
+            alert('Safe Arrival Attendance data send has been cancelled!');
+        }
+      }
+    }
+
+</script>
+<!-- ********************************************************************************************** -->
+
+<!-- start menu navigation -->
+<div id="nav-main">
+  <div id="nav-main-menu" roll="navigation">
+    <h3>Functions</h3>
+    <ul id="left_nav_functions">
+		
+<!-- **************************************** DDSB MODIFICATION *********************************** -->
+<!-- ------------ JAS: JUL/19/2018: ADD DDSB CUSTOM LINK TO START SAFE ARRIVAL AUTOSEND  ---------- --> 
+            <li id="new_link"
+                      onclick="Javascript:fncSendSafeArrival(function(response){
+                                                                 alert('Safe Arrival data has been processed!'
+                                                                     + '\n\nPlease log in to Safe Arrival to'
+                                                                     + ' verify the data transfer was successful.'
+                                                                 );
+                                                             });"><font  color="#195fa4">Send Safe Arrival Data
+                </font>
+            </li>
+
+            <br />
+<!-- --------- JAS: JUN/19/2018:  ADD ADVANCED FILTER LINK MAINLY FOR FACES ON THE DATA SUMMARY DATA TOOL ----------- -->
+		          <!-- John Stringer -->
+		          <!-- Ekta Patel -->
+		        <!-- Alex Toulis -->
+		         <!-- Allanna Grisnik-->
+		         <!-- Ann-Marie Riordan-->
+		         <!-- Cindy Scanion-->
+		    
+		       <!-- 113 Dr. C.F. Cannon P.S. -->
+		       <!-- 341 Sunderland P.S.-->
+		       <!-- 413 Williamsbug P.S. -->
+		       <!-- 435 West Lynde P.S -->
+		     <!-- 399 Lincoln Alexander P.S.-->
+		     <!-- 132 Northern Dancer P.S.-->
+		     <!-- 438 Winchester P.S.-->
+		     <!-- 395 Southwood Park P.S.-->
+		     <!-- 143 Sunset Heights P.S. -->
+		    <!--*******************************DDSB Modification****************************************************************-->
+		<!-- ------ENP:2018-10-26-----------------Provide access to all Secondary schools------------------------------------>
+	
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        <li><a href="/admin/ddsb/ddsb_tools/ddsb_advance_filter/ddsb_adv_filter.html">Advanced Filter (Beta)</a></li>
+		        
+		        
+		        
+		  <!--***********************************************************************************************-->
+		    
+<!-- ********************************************************************************************** -->
+
+
+      
+			<li><a href="/admin/attendance/functions/attendancestatus.html" id="navAttStatus" title="View attendance status">Attendance</a></li>
+			<li><a href="/admin/bulletin_popup.html" id="navBulletin" class="dialogM" title="View daily bulletin">Daily Bulletin</a></li>
+			<li><a href="/admin/reports/ethnicitybreakdown.html" id="navReportEthnicityBreakdown" title="View ethnicity breakdown report">Enrollment Summary</a></li>
+			<li><a href="/admin/masterschedule/home.html?break=15" id="navMasterSched" title="View master schedule">Master Schedule</a></li>
+			<li><a href="/admin/dashboard/atRisk.html" id="navDashboard" title="View dashboard">Dashboard</a></li>
+			<li><a href="/admin/functions.html" id="navSpecialFunctions" title="View special functions">Special Functions</a></li>
+			<li><a href="/admin/teacherschedules/" id="navTeachSched" title="View teacher&#39;s schedules">Teacher Schedules</a></li>
+         
+    		<!-- Start State LDS Links -->
+    		 <!-- After the issue of insert file tag breaking student/faculty
+    		      search results pages is resolved, state specific stuff should 
+    		      be moved to state specific html fragments and a single
+    		      insert file tag should be used here for all states
+    		  -->
+    		
+		      <!-- End State LDS Links -->    
+		</ul>
+
+		<h3>Reports</h3>
+		<ul id="left_nav_report">
+
+<!-- **************************************** DDSB MODIFICATION *********************************** -->
+<!-- -------------------------------------- ADD DDSB CUSTOM LINKS --------------------------------- -->
+<!--           <h3>DDSB Custom</h3>                                                                 -->
+<!--           <ul>                                                                                 -->
+                     <li><a href="/admin/ddsb/ddsb_home.html">DDSB Reports</a></li>
+<!--                 <li><a href="/admin/reports/statereports.html">Provincial Reports</a></li>     -->
+<!--                 <li><a href="/admin/ddsb/ddsb_home.html">DDSB Extracts</a></li>                -->
+<!--           </ul>                                                                                -->
+<!-- ********************************************************************************************** -->
+
+			<li><a href="/admin/reports/runreports.html" id="navSysReports" title="Run system reports">System Reports</a></li>
+			<li><a href="/admin/reports/runprreports.html" id="navRWReports" title="Run ReportWorks reports">ReportWorks</a></li>
+			<!--<li><a href="/admin/reports/statereports.html" id="navStateReports" title="Run state reports">State</a></li>-->
+			
+			
+			
+		</ul>
+
+		<h3>People</h3>
+		<ul id="left_nav_people">
+      
+			<li><a href="/admin/" id="navStudentSearch" title="Search for students">Student Search</a></li>
+			<li><a href="/admin/faculty/search.html" id="navFacultySearch" title="Search for Staff">Staff Search</a></li>
+    		<li><a href="/admin/contacts/search.html" id="navContactSearch" title="Contact Search">Contact Search</a></li>
+			<li><a href="/admin/students/newstudent.html" id="navNewStudent" title="Create new student record">Enroll New Student</a></li>
+			<li><a href="/admin/faculty/new.html?frn=005-99" id="navNewStaff" title="Create new Staff record">New Staff Entry</a> </li>
+			<li><a href="/admin/contacts/edit.html" id="navNewContact" target="_top" title="Create new Contact record">New Contact Entry</a></li>
+         
+		</ul>
+		
+		<h3>Setup</h3>
+		<ul id="left_nav_setup">
+			
+			<li><a href="/admin/schoolsetup/" id="navSetupSchool" title="Setup school">School</a></li>
+			
+			<li><a href="/admin/tech/" id="navSetupSystem" title="Setup PowerSchool systems">System</a></li>
+      
+			<li><a href="/admin/userpreferences.html?frn=0052776" id="navPersonalize" title="Personal settings">Personalize</a></li>
+            
+		</ul>
+		<h3>Applications</h3>
+		<ul id="left_nav_applications">
+			<li><a href="/admin/powerlunch/" id="navAppLunch" title="Launch PowerLunch">PowerLunch</a></li>
+			
+			
+			<li><a href="/admin/powerschedule/" id="navAppSched" title="Launch PowerScheduler">PowerScheduler</a></li>
+			
+			
+			<li><a href="/admin/launchptadmin" target="_blank" id="navAppPTAdmin" title="Launch PowerTeacher Administrator">PT Administrator</a></li>
+			<li><a href="/admin/reportworks/" id="navAppReportWorksDev" title="Launch ReportWorks Developer">ReportWorks Developer</a></li>
+			<li class="list-inline">
+   <a href="/admin/openid/oidredirectaction.action?pluginName=SchoolMessenger%20SSO&linkId=228" title="SchoolMessenger - Notification solutions" id="link-b7359e1459d4dd09302b0d4e9b84d038" 
+   target="_blank">SchoolMessenger</a>
+   
+</li>
+
+		</ul>
+		<ul><li><a href="/admin/Intellimedia/Export/homeroom-export-angularjs-kendo.html" id="navclicHomeRoom" title="DOCit Export by Home Room">DOCit Export</a></li></ul>
+	</div>	
+
+	<!-- JM 2020-01-15: Commented line below as it was causing the page to load the footer section higher on the page.
+	                    This resulted in the content of the page to be forced to the bottom. 
+	                    Note: Added a space to the beginning PS insertion tag as it was still loading footer even while commented out.-->
+    <!-- <div id="cust-leftnav-footer">~ [cust.insertion_point:leftnav.footer]</div> -->
+
+</div>
+<!-- end menu navigation -->
+
+
+<div id="content-main">
+
+
+
+
+<h1>Master Schedule List By Course</h1><!-- start of content and bounding box -->
+<div class="box-round">
+
+<!-- **************************** DDSB MODIFICATION ***************************** -->
+<!-- ----------- Modified table classs to allow sorting by any column ----------- -->
+
+<!-- <table border="0" cellspacing="0" cellpadding="4">                           -->
+<table class="sortable" border="0" cellspacing="0" cellpadding="4" id="sortable">
+<tr bgcolor="#f6f6f6">
+<td class="bold">Number.Section</td>
+<td class="bold">Course Name</td>
+<td class="bold">Expression</td>
+<td class="bold">Term</td>
+<td class="bold">Teacher Name</td>
+<td class="bold">Teacher Dept.</td>
+<td class="bold">Room</td>
+<td class="bold">Students</td>
+<td class="bold">Max Seats</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ADA1O1.60</td>
+<td>ADA1O1 - Dramatic Arts</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Grujicich, Jeffery M.</td>
+<td></td>
+<td>116</td>
+<td>22</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ADA1OF.70</td>
+<td>ADA1OF - Dramatic Arts</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Roberts, Sophianne</td>
+<td></td>
+<td>116</td>
+<td>18</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ADA1OF.80</td>
+<td>ADA1OF - Dramatic Arts</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Roberts, Sophianne</td>
+<td></td>
+<td>116</td>
+<td>16</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ADA3M1.50</td>
+<td>ADA3M1 - Dramatic Arts</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Grujicich, Jeffery M.</td>
+<td></td>
+<td>116</td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ADA4M1.50</td>
+<td>ADA4M1 - Dramatic Arts</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Grujicich, Jeffery M.</td>
+<td></td>
+<td>116</td>
+<td>11</td>
+<td>11</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AMH2O1.70</td>
+<td>AMH2O1 - Stage-Band Music</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>148</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AMH3M1.70</td>
+<td>AMH3M1 - Stage-Band Music</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>148</td>
+<td>2</td>
+<td>15</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AMH4M1.70</td>
+<td>AMH4M1 - Stage-Band Music</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>148</td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AMI3M1.80</td>
+<td>AMI3M1 - Instrumental Music - Band</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>148</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AMI4M1.80</td>
+<td>AMI4M1 - Instrumental Music - Band</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>148</td>
+<td>18</td>
+<td>19</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AMM3O1.60</td>
+<td>AMM3O1 - Music and Computers</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Charlton, Michelle</td>
+<td></td>
+<td>111</td>
+<td>10</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AVI1O1.50</td>
+<td>AVI1O1 - Visual Arts</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Caldarone-Bowerman, Suzanne</td>
+<td>ART</td>
+<td>199</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AVI1O1.51</td>
+<td>AVI1O1 - Visual Arts</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Ablett, Andrea</td>
+<td>ART</td>
+<td>197</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AVI1O1.70</td>
+<td>AVI1O1 - Visual Arts</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Ablett, Andrea</td>
+<td>ART</td>
+<td>197</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AVI1O1.80</td>
+<td>AVI1O1 - Visual Arts</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Caldarone-Bowerman, Suzanne</td>
+<td>ART</td>
+<td>199</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AVI2O1.80</td>
+<td>AVI2O1 - Visual Arts</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Ablett, Andrea</td>
+<td>ART</td>
+<td>197</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AVI3M1.70</td>
+<td>AVI3M1 - Visual Arts</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Caldarone-Bowerman, Suzanne</td>
+<td>ART</td>
+<td>199</td>
+<td>26</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AWO3M1.50</td>
+<td>AWO3M1 - Visual Arts - Printmaking</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Galberg, Kelly E.</td>
+<td></td>
+<td>184</td>
+<td>10</td>
+<td>11</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AWO3M1.60</td>
+<td>AWO3M1 - Visual Arts - Printmaking</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Galberg, Kelly E.</td>
+<td></td>
+<td>184</td>
+<td>24</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AWO4M1.50</td>
+<td>AWO4M1 - Visual Arts - Printmaking</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Galberg, Kelly E.</td>
+<td></td>
+<td>184</td>
+<td>11</td>
+<td>11</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>AWS3M1.60</td>
+<td>AWS3M1 - Visual Arts - Computer</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Thompson, Geoffrey B.</td>
+<td></td>
+<td>203</td>
+<td>17</td>
+<td>18</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>AWS4M1.60</td>
+<td>AWS4M1 - Visual Arts - Computer</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Thompson, Geoffrey B.</td>
+<td></td>
+<td>203</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>BAF3M1.80</td>
+<td>BAF3M1 - Intro. to Financial Accounting</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Borzecka, Ewa</td>
+<td>BUS</td>
+<td>171</td>
+<td>15</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>BAT4ME.EL2</td>
+<td>BAT4ME - Financial Accounting Princ.</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>BBI2O1.60</td>
+<td>BBI2O1 - Introduction to Business</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Clark, Richard M.</td>
+<td></td>
+<td>172</td>
+<td>23</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>BBI2O1.80</td>
+<td>BBI2O1 - Introduction to Business</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Galberg, Kelly E.</td>
+<td></td>
+<td>184</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>BMI3C1.80</td>
+<td>BMI3C1 - Introduction to Marketing</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Clark, Richard M.</td>
+<td></td>
+<td>172</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>BTT1O1.50</td>
+<td>BTT1O1 - Intro. to Info Tech in Business</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Borzecka, Ewa</td>
+<td>BUS</td>
+<td>171</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>BTT1O1.60</td>
+<td>BTT1O1 - Intro. to Info Tech in Business</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Borzecka, Ewa</td>
+<td>BUS</td>
+<td>171</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CGC1D1.50</td>
+<td>CGC1D1 - Issues in Canadian Geography</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Dawson, Shane</td>
+<td></td>
+<td>006</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CGC1D1.60</td>
+<td>CGC1D1 - Issues in Canadian Geography</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Dawson, Shane</td>
+<td></td>
+<td>006</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CGC1D1.70</td>
+<td>CGC1D1 - Issues in Canadian Geography</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Doran, Megan</td>
+<td></td>
+<td>243</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CGC1D1.80</td>
+<td>CGC1D1 - Issues in Canadian Geography</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Marlatt, Craig</td>
+<td></td>
+<td>019</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CGC1P1.60</td>
+<td>CGC1P1 - Issues in Canadian Geography</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Doran, Megan</td>
+<td></td>
+<td>243</td>
+<td>19</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CGC1PS.80</td>
+<td>CGC1PS - Issues in Canadian Geography</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CGF3M1.70</td>
+<td>CGF3M1 - Forces of Nature:Phys. Process</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Dawson, Shane</td>
+<td></td>
+<td>006</td>
+<td>23</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CGG3O1.60</td>
+<td>CGG3O1 - Travel & Tourism:Geog. Persp.</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Marlatt, Craig</td>
+<td></td>
+<td>019</td>
+<td>19</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CGW4UE.EL2</td>
+<td>CGW4UE - World Issues: Geog. Analysis</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>3</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CHC2D1.50</td>
+<td>CHC2D1 - Canadian History Since WWI</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Murray, Sean</td>
+<td>HIS</td>
+<td>249</td>
+<td>16</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CHC2D1.60</td>
+<td>CHC2D1 - Canadian History Since WWI</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Murray, Sean</td>
+<td>HIS</td>
+<td>249</td>
+<td>25</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CHC2D1.70</td>
+<td>CHC2D1 - Canadian History Since WWI</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Walker, Robert Roy</td>
+<td></td>
+<td>242</td>
+<td>21</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CHC2D1.80</td>
+<td>CHC2D1 - Canadian History Since WWI</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Doran, Megan</td>
+<td></td>
+<td>243</td>
+<td>16</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CHC2P1.60</td>
+<td>CHC2P1 - Canadian History since WWI</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>King, Lyle M.</td>
+<td></td>
+<td>176</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CHI4UE.EL2</td>
+<td>CHI4UE - Canada:History,Identity&Culture</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>2</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CHV2O1.52</td>
+<td>CHV2O1 - Civics and Citizenship</td>
+<td>1(A) 2(B)</td>
+<td>S22</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>179</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CHV2O1.62</td>
+<td>CHV2O1 - Civics and Citizenship</td>
+<td>1(B) 2(A)</td>
+<td>S22</td>
+<td>Brownridge, Jeremy</td>
+<td></td>
+<td>109</td>
+<td>22</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CHV2O1.71</td>
+<td>CHV2O1 - Civics and Citizenship</td>
+<td>3(A) 4(B)</td>
+<td>S21</td>
+<td>Murray, Sean</td>
+<td>HIS</td>
+<td>249</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CHV2O1.72</td>
+<td>CHV2O1 - Civics and Citizenship</td>
+<td>3(A) 4(B)</td>
+<td>S22</td>
+<td>Murray, Sean</td>
+<td>HIS</td>
+<td>249</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CHV2O1.82</td>
+<td>CHV2O1 - Civics and Citizenship</td>
+<td>3(B) 4(A)</td>
+<td>S22</td>
+<td>Brownridge, Jeremy</td>
+<td></td>
+<td>109</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CHW3M1.60</td>
+<td>CHW3M1 - World History to 15th Century</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Stark, Andrew</td>
+<td></td>
+<td>110</td>
+<td>22</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CIA4U1.50</td>
+<td>CIA4U1 - Analysing Current Economic Iss.</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Clark, Richard M.</td>
+<td></td>
+<td>172</td>
+<td>22</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CLN4U1.80</td>
+<td>CLN4U1 - Canadian & International Law</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Creelman, Heather A.</td>
+<td>BUS</td>
+<td>177</td>
+<td>28</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CLN4UE.EL2</td>
+<td>CLN4UE - Canadian & International Law</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>0</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CLU3M1.60</td>
+<td>CLU3M1 - Understanding Canadian Law</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Creelman, Heather A.</td>
+<td>BUS</td>
+<td>177</td>
+<td>26</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CLU3M1.70</td>
+<td>CLU3M1 - Understanding Canadian Law</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Creelman, Heather A.</td>
+<td>BUS</td>
+<td>177</td>
+<td>25</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CWE1O9.70</td>
+<td>CWE1O9 - Co-Operative Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>GUD</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CWE2O9.50</td>
+<td>CWE2O9 - Co-Operative Education</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>CWE2O9.70</td>
+<td>CWE2O9 - Co-Operative Education</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>CWE4O9.50</td>
+<td>CWE4O9 - Co-Operative Education</td>
+<td>1-4(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>OFF1</td>
+<td>1</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>DEP1O1.50</td>
+<td>DEP1O1 - Department Supervision</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Bowring, Angela A.</td>
+<td></td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>DEP1O1.81</td>
+<td>DEP1O1 - Department Supervision</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Begg, Susan M.</td>
+<td>TEC</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ELS2O1.50</td>
+<td>ELS2O1 - Literacy Skills</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>White, Shannon N.</td>
+<td></td>
+<td>215</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG1D1.50</td>
+<td>ENG1D1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Cormack, Stephen</td>
+<td></td>
+<td>189</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG1D1.51</td>
+<td>ENG1D1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Stark, James C.</td>
+<td>ENG</td>
+<td>109</td>
+<td>26</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG1D1.60</td>
+<td>ENG1D1 - English</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Cormack, Stephen</td>
+<td></td>
+<td>189</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG1D1.70</td>
+<td>ENG1D1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Aguiar, Marlene</td>
+<td>ENG</td>
+<td>110</td>
+<td>26</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG1D1.80</td>
+<td>ENG1D1 - English</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Grujicich, Jeffery M.</td>
+<td></td>
+<td>195</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG2D1.50</td>
+<td>ENG2D1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Koutsoulias, Dimitra</td>
+<td>ENG</td>
+<td>192</td>
+<td>13</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG2D1.60</td>
+<td>ENG2D1 - English</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Koutsoulias, Dimitra</td>
+<td>ENG</td>
+<td>192</td>
+<td>23</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG2D1.70</td>
+<td>ENG2D1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Kulas, Laura</td>
+<td></td>
+<td>246</td>
+<td>12</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG2D1.80</td>
+<td>ENG2D1 - English</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Kulas, Laura</td>
+<td></td>
+<td>246</td>
+<td>25</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG2PS.80</td>
+<td>ENG2PS -  English</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Cormack, Stephen</td>
+<td></td>
+<td>189</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG3C1.50</td>
+<td>ENG3C1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Davis, Paula</td>
+<td>Soc Sci</td>
+<td>211</td>
+<td>22</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG3C1.70</td>
+<td>ENG3C1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Davis, Paula</td>
+<td>Soc Sci</td>
+<td>211</td>
+<td>21</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG3E1.70</td>
+<td>ENG3E1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG3U1.50</td>
+<td>ENG3U1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Bagshaw, Kimberley</td>
+<td>ENG</td>
+<td>185</td>
+<td>19</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG3U1.51</td>
+<td>ENG3U1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Kulas, Laura</td>
+<td></td>
+<td>246</td>
+<td>20</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG3U1.60</td>
+<td>ENG3U1 - English</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Bowring, Angela A.</td>
+<td></td>
+<td>194</td>
+<td>23</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG3U1.70</td>
+<td>ENG3U1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Stark, James C.</td>
+<td>ENG</td>
+<td>185</td>
+<td>15</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG3U1.80</td>
+<td>ENG3U1 - English</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Stark, James C.</td>
+<td>ENG</td>
+<td>185</td>
+<td>20</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG4C1.60</td>
+<td>ENG4C1 - English</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Walker, Robert Roy</td>
+<td></td>
+<td>242</td>
+<td>22</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG4C1.80</td>
+<td>ENG4C1 - English</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Walker, Robert Roy</td>
+<td></td>
+<td>242</td>
+<td>16</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG4E1.70</td>
+<td>ENG4E1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>1</td>
+<td>6</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG4U1.50</td>
+<td>ENG4U1 - English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Adams, Charlotte</td>
+<td></td>
+<td>195</td>
+<td>29</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG4U1.60</td>
+<td>ENG4U1 - English</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Adams, Charlotte</td>
+<td></td>
+<td>195</td>
+<td>26</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG4U1.70</td>
+<td>ENG4U1 - English</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Koutsoulias, Dimitra</td>
+<td>ENG</td>
+<td>192</td>
+<td>13</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ENG4U1.80</td>
+<td>ENG4U1 - English</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Bowring, Angela A.</td>
+<td></td>
+<td>194</td>
+<td>15</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ENG4UE.EL2</td>
+<td>ENG4UE - English</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>30</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ESLAO1.9</td>
+<td>ESLAO1 - Beginning Comm. in English</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>White, Shannon N.</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ESLCO1.9</td>
+<td>ESLCO1 - English for School and Work</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>White, Shannon N.</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>EWC4U1.60</td>
+<td>EWC4U1 - The Writers Craft</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Bagshaw, Kimberley</td>
+<td>ENG</td>
+<td>185</td>
+<td>29</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FIF2D9.51</td>
+<td>FIF2D9 - French Immersion</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>4</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>FIF2D9.71</td>
+<td>FIF2D9 - French Immersion</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>6</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FIF2DF.70</td>
+<td>FIF2DF - French Immersion</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Rodd, Sylvie</td>
+<td>FRE</td>
+<td>180</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>FIF3UE.EL2</td>
+<td>FIF3UE - French Immersion</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>1</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FIF4UF.60</td>
+<td>FIF4UF - French Immersion</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Rodd, Sylvie</td>
+<td>FRE</td>
+<td>180</td>
+<td>29</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>FSF1D1.50</td>
+<td>FSF1D1 - Core French</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Rousseau, Guylaine</td>
+<td></td>
+<td>173</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FSF1D1.60</td>
+<td>FSF1D1 - Core French</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Lodwick, Shelby</td>
+<td></td>
+<td>178</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>FSF1D1.80</td>
+<td>FSF1D1 - Core French</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Rousseau, Guylaine</td>
+<td></td>
+<td>178</td>
+<td>24</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FSF1P1.80</td>
+<td>FSF1P1 - Core French</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Lodwick, Shelby</td>
+<td></td>
+<td>176</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>FSF2D1.50</td>
+<td>FSF2D1 - Core French</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Lodwick, Shelby</td>
+<td></td>
+<td>178</td>
+<td>26</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FSF2D1.80</td>
+<td>FSF2D1 - Core French</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Rodd, Sylvie</td>
+<td>FRE</td>
+<td>180</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>FSF3U1.80</td>
+<td>FSF3U1 - Core French</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Rodd, Sylvie</td>
+<td>FRE</td>
+<td>180</td>
+<td>16</td>
+<td>18</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>FSF3UE.EL2</td>
+<td>FSF3UE - Core French</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>30</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O1.51</td>
+<td>GLC2O1 - Career Studies</td>
+<td>1(A) 2(B)</td>
+<td>S21</td>
+<td>Peck, Amy</td>
+<td></td>
+<td>179</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O1.61</td>
+<td>GLC2O1 - Career Studies</td>
+<td>1(B) 2(A)</td>
+<td>S21</td>
+<td>Brownridge, Jeremy</td>
+<td></td>
+<td>109</td>
+<td>22</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O1.71</td>
+<td>GLC2O1 - Career Studies</td>
+<td>3(A) 4(B)</td>
+<td>S21</td>
+<td>Colby, Bradley D.</td>
+<td></td>
+<td>172</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O1.72</td>
+<td>GLC2O1 - Career Studies</td>
+<td>3(A) 4(B)</td>
+<td>S22</td>
+<td>Colby, Bradley D.</td>
+<td></td>
+<td>172</td>
+<td>19</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O1.81</td>
+<td>GLC2O1 - Career Studies</td>
+<td>3(B) 4(A)</td>
+<td>S21</td>
+<td>Brownridge, Jeremy</td>
+<td></td>
+<td>109</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O8.70</td>
+<td>GLC2O8 - Career Studies</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O9.50</td>
+<td>GLC2O9 - Career Studies</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>10</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O9.51</td>
+<td>GLC2O9 - Career Studies</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O9.60</td>
+<td>GLC2O9 - Career Studies</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O9.61</td>
+<td>GLC2O9 - Career Studies</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O9.70</td>
+<td>GLC2O9 - Career Studies</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>11</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O9.71</td>
+<td>GLC2O9 - Career Studies</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>8</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O9.72</td>
+<td>GLC2O9 - Career Studies</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLC2O9.80</td>
+<td>GLC2O9 - Career Studies</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLC2O9.81</td>
+<td>GLC2O9 - Career Studies</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLD2OQ.50</td>
+<td>GLD2OQ - Discovering the Workplace</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLD2OX.70</td>
+<td>GLD2OX - Discovering the Workplace</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>215</td>
+<td>8</td>
+<td>14</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLE2O1.4</td>
+<td>GLE2O1 - Learning Strategies</td>
+<td>5(A-B)</td>
+<td>19/20</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td></td>
+<td>0</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLN4OQ.50</td>
+<td>GLN4OQ - Navigating the Workplace</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLN4OQ.60</td>
+<td>GLN4OQ - Navigating the Workplace</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GLN4OQ.70</td>
+<td>GLN4OQ - Navigating the Workplace</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GLN4OQ.80</td>
+<td>GLN4OQ - Navigating the Workplace</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GUD1O0.50</td>
+<td>GUD1O0 - Guidance</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Ridgway, Julia</td>
+<td></td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GUD1O0.60</td>
+<td>GUD1O0 - Guidance</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Houston, Robert</td>
+<td>GUD</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GUD1O0.61</td>
+<td>GUD1O0 - Guidance</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GUD1O0.70</td>
+<td>GUD1O0 - Guidance</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Houston, Robert</td>
+<td>GUD</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GUD1O0.71</td>
+<td>GUD1O0 - Guidance</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Ridgway, Julia</td>
+<td></td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GUD1O0.72</td>
+<td>GUD1O0 - Guidance</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GUD1O0.80</td>
+<td>GUD1O0 - Guidance</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Houston, Robert</td>
+<td>GUD</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>GUD1O0.81</td>
+<td>GUD1O0 - Guidance</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Ridgway, Julia</td>
+<td></td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>GUD1O0.82</td>
+<td>GUD1O0 - Guidance</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>OFF1</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HFA4U1.90</td>
+<td>HFA4U1 - Nutrition and Health</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>Minor, Michelle</td>
+<td></td>
+<td></td>
+<td>28</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>HFA4UE.EL2</td>
+<td>HFA4UE - Nutrition and Health</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>0</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HHG4M1.80</td>
+<td>HHG4M1 - Human Development</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Kennedy, Rebecca</td>
+<td></td>
+<td>179</td>
+<td>27</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>HHG4ME.EL2</td>
+<td>HHG4ME - Human Development</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>1</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HHS4U1.90</td>
+<td>HHS4U1 - Families in Canada</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>Davis, Paula</td>
+<td>Soc Sci</td>
+<td></td>
+<td>28</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>HHS4UE.EL2</td>
+<td>HHS4UE - Families in Canada</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HIP4O1.70</td>
+<td>HIP4O1 - Personal Life Management</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Brownridge, Jeremy</td>
+<td></td>
+<td>109</td>
+<td>23</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>HSB4UE.EL2</td>
+<td>HSB4UE - Challenge & Change in Society</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HSC4ME.EL2</td>
+<td>HSC4ME - World Cultures</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>0</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>HSE4M1.70</td>
+<td>HSE4M1 - Equity & Social Justice -Theory</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Marlatt, Craig</td>
+<td></td>
+<td>019</td>
+<td>27</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HSE4MF.70</td>
+<td>HSE4MF - Equity and Social Justice from </td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Rousseau, Guylaine</td>
+<td></td>
+<td>178</td>
+<td>21</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>HSG3ME.EL2</td>
+<td>HSG3ME - Gender Studies</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>1</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>HSP3U1.70</td>
+<td>HSP3U1 - Intro:Anthro./Psych/Soc.</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Stowell-Smith, Valerie</td>
+<td></td>
+<td>171</td>
+<td>24</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>ICS3U1.80</td>
+<td>ICS3U1 - Intro to Computer Science</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Thompson, Geoffrey B.</td>
+<td></td>
+<td>203</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>ICS4U1.80</td>
+<td>ICS4U1 - Computer Science</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Thompson, Geoffrey B.</td>
+<td></td>
+<td>203</td>
+<td>14</td>
+<td>14</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>IDC3O1.50</td>
+<td>IDC3O1 - Interdisciplinary Studies</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Hale, Stephanie M</td>
+<td></td>
+<td>LIB</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>IDC4UL.70</td>
+<td>IDC4UL - Interdisciplinary Studies</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Kennedy, Rebecca</td>
+<td></td>
+<td>179</td>
+<td>29</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>KCCAN1.50</td>
+<td>KCCAN1 - Transit Training and Community </td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Coleman-Carson, Tania</td>
+<td>SPEC ED</td>
+<td>147</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>KENAN1.50</td>
+<td>KENAN1 - Lang.&Communication Development</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Allison, Colleen</td>
+<td>SPEC ED</td>
+<td>146</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>KENANP.50</td>
+<td>KENANP - Lang.&Communication Development</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Reis, Sarah</td>
+<td>SPEC ED</td>
+<td>143</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>KGLANP.60</td>
+<td>KGLANP - Personal Life Skills</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Coleman-Carson, Tania</td>
+<td>SPEC ED</td>
+<td>147</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>KGWANP.80</td>
+<td>KGWANP - Exploring the World of Work</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Coleman-Carson, Tania</td>
+<td>SPEC ED</td>
+<td>147</td>
+<td>4</td>
+<td>31</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>KHDAN1.70</td>
+<td>KHDAN1 - Social Skills Development</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Allison, Colleen</td>
+<td>SPEC ED</td>
+<td>146</td>
+<td>6</td>
+<td>10</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>KHDANP.70</td>
+<td>KHDANP - Social Skills Development</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Brown, Samantha T.</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>4</td>
+<td>31</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>KHDANP.71</td>
+<td>KHDANP - Social Skills Development</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Reis, Sarah</td>
+<td>SPEC ED</td>
+<td>143</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>KMMAN1.60</td>
+<td>KMMAN1 - Numeracy and Numbers</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Allison, Colleen</td>
+<td>SPEC ED</td>
+<td>146</td>
+<td>2</td>
+<td>10</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>KMMANP.60</td>
+<td>KMMANP - Numeracy and Numbers</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Reis, Sarah</td>
+<td>SPEC ED</td>
+<td>143</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>KPFANP.80</td>
+<td>KPFANP - Personal Health and Fitness</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Brown, Samantha T.</td>
+<td>SPEC ED</td>
+<td>104</td>
+<td>8</td>
+<td>31</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>LIB1O0.50</td>
+<td>LIB1O0 - Library</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Cramm, Heather L.</td>
+<td></td>
+<td>LIB</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>LIB1O0.60</td>
+<td>LIB1O0 - Library</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Aguiar, Marlene</td>
+<td>ENG</td>
+<td>LIB</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>LIB1O0.70</td>
+<td>LIB1O0 - Library</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Cramm, Heather L.</td>
+<td></td>
+<td>LIB</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>LIB1O0.80</td>
+<td>LIB1O0 - Library</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Aguiar, Marlene</td>
+<td>ENG</td>
+<td>LIB</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>LWSBD1.70</td>
+<td>LWSBD1 - Spanish-International Languages</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Adams, Charlotte</td>
+<td></td>
+<td>195</td>
+<td>16</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MAP4C1.50</td>
+<td>MAP4C1 - Foundations for College Math</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Kiriakou, Andony</td>
+<td></td>
+<td>108</td>
+<td>23</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MAP4C1.70</td>
+<td>MAP4C1 - Foundations for College Math</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Kiriakou, Andony</td>
+<td></td>
+<td>108</td>
+<td>17</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MAT1L1.50</td>
+<td>MAT1L1 - Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MAT1LS.50</td>
+<td>MAT1LS - Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>6</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MAT2L1.50</td>
+<td>MAT2L1 - Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>2</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MAT2LS.50</td>
+<td>MAT2LS - Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>MacMichael, Jack</td>
+<td></td>
+<td>002</td>
+<td>3</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MBF3C1.50</td>
+<td>MBF3C1 - Foundations for College Math</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Begg, Donald A.</td>
+<td>MAT</td>
+<td>209</td>
+<td>18</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MBF3C1.60</td>
+<td>MBF3C1 - Foundations for College Math</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Jansma, Rebecca</td>
+<td>MAT</td>
+<td>206</td>
+<td>21</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MCF3M1.60</td>
+<td>MCF3M1 - Functions & Applications</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Ghafur, Faraaz</td>
+<td></td>
+<td>107</td>
+<td>23</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MCF3M1.70</td>
+<td>MCF3M1 - Functions & Applications</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Ghafur, Faraaz</td>
+<td></td>
+<td>107</td>
+<td>21</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MCR3U1.50</td>
+<td>MCR3U1 - Functions</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Kouba, Justin</td>
+<td></td>
+<td>210</td>
+<td>24</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MCR3U1.60</td>
+<td>MCR3U1 - Functions</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Cramm, Heather L.</td>
+<td></td>
+<td>210</td>
+<td>25</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MCR3U1.70</td>
+<td>MCR3U1 - Functions</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Pinkerton, Colin</td>
+<td></td>
+<td>217</td>
+<td>21</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MCT4CE.EL2</td>
+<td>MCT4CE - Mathematics for College Tech.</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MCV4U1.50</td>
+<td>MCV4U1 - Calculus and Vectors</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Smale, Michelle D.</td>
+<td>MAT</td>
+<td>204</td>
+<td>26</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MCV4U1.70</td>
+<td>MCV4U1 - Calculus and Vectors</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Kouba, Justin</td>
+<td></td>
+<td>210</td>
+<td>25</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MDM4U1.60</td>
+<td>MDM4U1 - Mathematics of Data Management</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Begg, Donald A.</td>
+<td>MAT</td>
+<td>209</td>
+<td>28</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MDM4UE.EL2</td>
+<td>MDM4UE - Mathematics of Data Management</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MFM1P1.70</td>
+<td>MFM1P1 - Foundations of Mathematics</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Smale, Michelle D.</td>
+<td>MAT</td>
+<td>204</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MFM1PS.50</td>
+<td>MFM1PS - Foundations of Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Hooker, Shirley</td>
+<td></td>
+<td>175</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MFM2P1.80</td>
+<td>MFM2P1 - Foundations of Mathematics</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Ghafur, Faraaz</td>
+<td></td>
+<td>107</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MFM2PS.60</td>
+<td>MFM2PS - Foundations of Mathematics</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Hooker, Shirley</td>
+<td></td>
+<td>175</td>
+<td>9</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MHF4U1.50</td>
+<td>MHF4U1 - Advanced Functions</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Pinkerton, Colin</td>
+<td></td>
+<td>217</td>
+<td>28</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MHF4U1.80</td>
+<td>MHF4U1 - Advanced Functions</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Pinkerton, Colin</td>
+<td></td>
+<td>217</td>
+<td>17</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MPM1D1.50</td>
+<td>MPM1D1 - Principles of Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Avery, Alan R.</td>
+<td></td>
+<td>216</td>
+<td>24</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MPM1D1.60</td>
+<td>MPM1D1 - Principles of Mathematics</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Smale, Michelle D.</td>
+<td>MAT</td>
+<td>204</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MPM1D1.70</td>
+<td>MPM1D1 - Principles of Mathematics</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Jansma, Rebecca</td>
+<td>MAT</td>
+<td>206</td>
+<td>26</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MPM1D1.71</td>
+<td>MPM1D1 - Principles of Mathematics</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Begg, Donald A.</td>
+<td>MAT</td>
+<td>209</td>
+<td>26</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MPM1D1.80</td>
+<td>MPM1D1 - Principles of Mathematics</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Kouba, Justin</td>
+<td></td>
+<td>210</td>
+<td>25</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MPM2D1.50</td>
+<td>MPM2D1 - Principles of Mathematics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Jansma, Rebecca</td>
+<td>MAT</td>
+<td>206</td>
+<td>24</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>MPM2D1.60</td>
+<td>MPM2D1 - Principles of Mathematics</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Kiriakou, Andony</td>
+<td></td>
+<td>108</td>
+<td>23</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>MPM2D1.80</td>
+<td>MPM2D1 - Principles of Mathematics</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Avery, Alan R.</td>
+<td></td>
+<td>216</td>
+<td>26</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>OLC4O1.50</td>
+<td>OLC4O1 - Ontario SS Literacy Course</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>King, Lyle M.</td>
+<td></td>
+<td>176</td>
+<td>16</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>OLC4O1.70</td>
+<td>OLC4O1 - Ontario SS Literacy Course</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>King, Lyle M.</td>
+<td></td>
+<td>176</td>
+<td>13</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PAD4O1.80</td>
+<td>PAD4O1 - Outdoor Activities</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Orschel, Jean</td>
+<td></td>
+<td>173</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PAF2O3.60</td>
+<td>PAF2O3 - Personal and Fitness Activities</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>DE HEUS, Josh H.</td>
+<td>PHYS ED</td>
+<td>158S</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PAF2O4.50</td>
+<td>PAF2O4 - Personal and Fitness Activities</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Stowell-Smith, Valerie</td>
+<td></td>
+<td>130</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PAF2O4.70</td>
+<td>PAF2O4 - Personal and Fitness Activities</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Dobson, Heather A.</td>
+<td></td>
+<td>130</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PAF3O3.80</td>
+<td>PAF3O3 - Personal and Fitness Activities</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>DE HEUS, Josh H.</td>
+<td>PHYS ED</td>
+<td>130</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PAI4O1.80</td>
+<td>PAI4O1 - Individual&Small Grp Activities</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Stark, Andrew</td>
+<td></td>
+<td>110</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PAL3O3.60</td>
+<td>PAL3O3 - Large Group Activities</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Avery, Alan R.</td>
+<td></td>
+<td>158S</td>
+<td>22</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PAL3O4.50</td>
+<td>PAL3O4 - Large Group Activities</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>McKee, Christopher</td>
+<td></td>
+<td>104G</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PLF4M1.80</td>
+<td>PLF4M1 - Recreation & Healthy Leadership</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Orschel, Jean</td>
+<td></td>
+<td>173</td>
+<td>19</td>
+<td>20</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL1O3.50</td>
+<td>PPL1O3 - Healthy Active Living Education</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>DE HEUS, Josh H.</td>
+<td>PHYS ED</td>
+<td>104B</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PPL1O3.70</td>
+<td>PPL1O3 - Healthy Active Living Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>McKee, Christopher</td>
+<td></td>
+<td>104B</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL1O3.80</td>
+<td>PPL1O3 - Healthy Active Living Education</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>McKee, Christopher</td>
+<td></td>
+<td>158B</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PPL1O4.60</td>
+<td>PPL1O4 - Healthy Active Living Education</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Kennedy, Rebecca</td>
+<td></td>
+<td>158G</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL1O4.80</td>
+<td>PPL1O4 - Healthy Active Living Education</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Stowell-Smith, Valerie</td>
+<td></td>
+<td>158G</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PPL1O8.70</td>
+<td>PPL1O8 - Healthy Active Living Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL1O9.50</td>
+<td>PPL1O9 - Healthy Active Living Education</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>7</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PPL1O9.51</td>
+<td>PPL1O9 - Healthy Active Living Education</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>7</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL1O9.70</td>
+<td>PPL1O9 - Healthy Active Living Education</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PPL1O9.72</td>
+<td>PPL1O9 - Healthy Active Living Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL2O3.70</td>
+<td>PPL2O3 - Healthy Active Living Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Stark, Andrew</td>
+<td></td>
+<td>158B</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PPL2O9.70</td>
+<td>PPL2O9 - Healthy Active Living Education</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>2</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PPL2O9.71</td>
+<td>PPL2O9 - Healthy Active Living Education</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>PSK4U1.60</td>
+<td>PSK4U1 - Introduction to Kinesiology</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Minor, Michelle</td>
+<td></td>
+<td>217</td>
+<td>14</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>PSK4UE.EL2</td>
+<td>PSK4UE - Introduction to Kinesiology</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SBI3C1.80</td>
+<td>SBI3C1 - Biology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Wride, Barbara</td>
+<td>SNC</td>
+<td>231</td>
+<td>17</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SBI3C9.71</td>
+<td>SBI3C9 - Biology</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>Barnett, Cindy Ann</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SBI3U1.50</td>
+<td>SBI3U1 - Biology</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Condy, Charmain</td>
+<td>SNC</td>
+<td>227</td>
+<td>22</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SBI3U1.80</td>
+<td>SBI3U1 - Biology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Condy, Charmain</td>
+<td>SNC</td>
+<td>227</td>
+<td>29</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SBI3UE.1</td>
+<td>SBI3UE - Biology</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>0</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SBI4U1.60</td>
+<td>SBI4U1 - Biology</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Condy, Charmain</td>
+<td>SNC</td>
+<td>227</td>
+<td>20</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SCH3U1.50</td>
+<td>SCH3U1 - Chemistry</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Lewis, Darren</td>
+<td></td>
+<td>222</td>
+<td>26</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SCH3U1.70</td>
+<td>SCH3U1 - Chemistry</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Hale, Stephanie M</td>
+<td></td>
+<td>233</td>
+<td>28</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SCH3U1.80</td>
+<td>SCH3U1 - Chemistry</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Lewis, Darren</td>
+<td></td>
+<td>222</td>
+<td>23</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SCH4U1.70</td>
+<td>SCH4U1 - Chemistry</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Martens, Leslie A</td>
+<td>SNC</td>
+<td>223</td>
+<td>16</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SCH4U1.80</td>
+<td>SCH4U1 - Chemistry</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Martens, Leslie A</td>
+<td>SNC</td>
+<td>223</td>
+<td>23</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SED1O0.1</td>
+<td>SED1O0 - Special Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Hooker, Shirley</td>
+<td></td>
+<td>175</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SED1O0.50</td>
+<td>SED1O0 - Special Education</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Brown, Samantha T.</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SED1O0.51</td>
+<td>SED1O0 - Special Education</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Poetker, Jennifer</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SED1O0.60</td>
+<td>SED1O0 - Special Education</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Poetker, Jennifer</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SED1O0.61</td>
+<td>SED1O0 - Special Education</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Brown, Samantha T.</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SED1O0.71</td>
+<td>SED1O0 - Special Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Poetker, Jennifer</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SED1O0.72</td>
+<td>SED1O0 - Special Education</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Brown, Samantha T.</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SED1O0.80</td>
+<td>SED1O0 - Special Education</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Poetker, Jennifer</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SED1O0.82</td>
+<td>SED1O0 - Special Education</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Brown, Samantha T.</td>
+<td>SPEC ED</td>
+<td>141</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SES4UE.EL2</td>
+<td>SES4UE - Earth & Space Science</td>
+<td>5(A-B)</td>
+<td>S2</td>
+<td>eLearning, Out of Board</td>
+<td></td>
+<td>EL</td>
+<td>1</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SNC1D1.50</td>
+<td>SNC1D1 - Science</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Orschel, Jean</td>
+<td></td>
+<td>226</td>
+<td>21</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SNC1D1.60</td>
+<td>SNC1D1 - Science</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Orschel, Jean</td>
+<td></td>
+<td>226</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SNC1D1.70</td>
+<td>SNC1D1 - Science</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Wride, Barbara</td>
+<td>SNC</td>
+<td>231</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SNC1D1.80</td>
+<td>SNC1D1 - Science</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Sherazi, Farah</td>
+<td></td>
+<td>226</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SNC1DF.60</td>
+<td>SNC1DF - Science</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Roberts, Sophianne</td>
+<td></td>
+<td>222</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SNC1P1.50</td>
+<td>SNC1P1 - Science</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Sherazi, Farah</td>
+<td></td>
+<td>231</td>
+<td>14</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SNC1P1.60</td>
+<td>SNC1P1 - Science</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Sherazi, Farah</td>
+<td></td>
+<td>231</td>
+<td>18</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SNC2D1.50</td>
+<td>SNC2D1 - Science</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Dobson, Heather A.</td>
+<td></td>
+<td>223</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SNC2D1.60</td>
+<td>SNC2D1 - Science</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Dobson, Heather A.</td>
+<td></td>
+<td>223</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SNC2D1.70</td>
+<td>SNC2D1 - Science</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Minor, Michelle</td>
+<td></td>
+<td>226</td>
+<td>25</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SNC2D1.80</td>
+<td>SNC2D1 - Science</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Hale, Stephanie M</td>
+<td></td>
+<td>233</td>
+<td>28</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SNC2P1.70</td>
+<td>SNC2P1 - Science</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Lewis, Darren</td>
+<td></td>
+<td>222</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SPH3U1.60</td>
+<td>SPH3U1 - Physics</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Redman, Leah</td>
+<td></td>
+<td>229</td>
+<td>22</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SPH3U1.80</td>
+<td>SPH3U1 - Physics</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Redman, Leah</td>
+<td></td>
+<td>229</td>
+<td>17</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SPH4U1.50</td>
+<td>SPH4U1 - Physics</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Redman, Leah</td>
+<td></td>
+<td>229</td>
+<td>16</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SST1O0.50</td>
+<td>SST1O0 - Student Success Teacher</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD4</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SST1O0.60</td>
+<td>SST1O0 - Student Success Teacher</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>O'Keefe Foster, Kathleen</td>
+<td>GUD</td>
+<td>GUD3</td>
+<td>0</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDY0.50</td>
+<td>STUDY0 - Study Hall</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>10</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDY0.60</td>
+<td>STUDY0 - Study Hall</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>11</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDY0.70</td>
+<td>STUDY0 - Study Hall</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>6</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDY0.80</td>
+<td>STUDY0 - Study Hall</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>2</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDY2.50</td>
+<td>STUDY2 - Study Hall</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>59</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDY2.60</td>
+<td>STUDY2 - Study Hall</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>44</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDY2.70</td>
+<td>STUDY2 - Study Hall</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>58</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDY2.80</td>
+<td>STUDY2 - Study Hall</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>35</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDY4.50</td>
+<td>STUDY4 - Study Hall</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>ASAD</td>
+<td>6</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDY4.60</td>
+<td>STUDY4 - Study Hall</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>ASAD</td>
+<td>6</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDY6.50</td>
+<td>STUDY6 - Study Hall</td>
+<td>1-4(A-B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>0</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDYE.50</td>
+<td>STUDYE - Study Hall</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>11</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDYE.60</td>
+<td>STUDYE - Study Hall</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>9</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>STUDYE.70</td>
+<td>STUDYE - Study Hall</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>9</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>STUDYE.80</td>
+<td>STUDYE - Study Hall</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>CAF1</td>
+<td>7</td>
+<td>999</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>SVN3E1.60</td>
+<td>SVN3E1 - Environmental Science</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Wride, Barbara</td>
+<td>SNC</td>
+<td>233</td>
+<td>12</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>SVN3MD.30</td>
+<td>SVN3MD - Environmental Science</td>
+<td>3-4(A-B)</td>
+<td>19/20</td>
+<td>Allen, Carolyn</td>
+<td>GUD</td>
+<td>173</td>
+<td>0</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TCJ4C1.60</td>
+<td>TCJ4C1 - Construction Engineering Tech.</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Levere, Bradley</td>
+<td>TEC</td>
+<td>161</td>
+<td>19</td>
+<td>20</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TDJ2O1.70</td>
+<td>TDJ2O1 - Technological Design</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Levere, Bradley</td>
+<td>TEC</td>
+<td>111</td>
+<td>23</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TDJ3M1.80</td>
+<td>TDJ3M1 - Technological Design</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Levere, Bradley</td>
+<td>TEC</td>
+<td>111</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TFJ1O1.70</td>
+<td>TFJ1O1 - Hospitality&Tourism Technology</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Charlton, Michelle</td>
+<td></td>
+<td>168</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TFJ1O1.80</td>
+<td>TFJ1O1 - Hospitality&Tourism Technology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Brown, David W.</td>
+<td>TEC</td>
+<td>168</td>
+<td>23</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TFJ1O8.80</td>
+<td>TFJ1O8 - Hospitality&Tourism Technology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TFJ1O9.80</td>
+<td>TFJ1O9 - Hospitality&Tourism Technology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TFJ2O1.50</td>
+<td>TFJ2O1 - Hospitality &Tourism</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Begg, Susan M.</td>
+<td>TEC</td>
+<td>124</td>
+<td>23</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TFJ2O1.60</td>
+<td>TFJ2O1 - Hospitality &Tourism</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Brown, David W.</td>
+<td>TEC</td>
+<td>168</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TFJ2O1.80</td>
+<td>TFJ2O1 - Hospitality &Tourism</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Charlton, Michelle</td>
+<td></td>
+<td>124</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TFJ3CD.50</td>
+<td>TFJ3CD - Hospitality and Tourism</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Brown, David W.</td>
+<td>TEC</td>
+<td>168</td>
+<td>18</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TFJ3E1.60</td>
+<td>TFJ3E1 - Hospitality and Tourism</td>
+<td>1(B) 2(A)</td>
+<td>S2</td>
+<td>Begg, Susan M.</td>
+<td>TEC</td>
+<td>124</td>
+<td>21</td>
+<td>21</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TGJ1O1.70</td>
+<td>TGJ1O1 - Communications Technology</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Thompson, Geoffrey B.</td>
+<td></td>
+<td>203</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TGJ2O1.50</td>
+<td>TGJ2O1 - Communications Technology</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Brown, Robert</td>
+<td>TEC</td>
+<td>132</td>
+<td>22</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TGJ2O1.70</td>
+<td>TGJ2O1 - Communications Technology</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Brown, Robert</td>
+<td>TEC</td>
+<td>132</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TGJ3M1.70</td>
+<td>TGJ3M1 - Communications Technology</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>Brown, Robert</td>
+<td>TEC</td>
+<td>132</td>
+<td>12</td>
+<td>13</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TGJ4M1.80</td>
+<td>TGJ4M1 - Communications Technology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Brown, Robert</td>
+<td>TEC</td>
+<td>132</td>
+<td>18</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TMJ2O1.50</td>
+<td>TMJ2O1 - Manufacturing Technology</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>McFadden, Andrew</td>
+<td></td>
+<td>163</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TMJ2O9.71</td>
+<td>TMJ2O9 - Manufacturing Technology</td>
+<td>3-4(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>0</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TMJ3C1.70</td>
+<td>TMJ3C1 - Manufacturing Technology</td>
+<td>3(A) 4(B)</td>
+<td>S2</td>
+<td>McFadden, Andrew</td>
+<td></td>
+<td>163</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TMJ4C1.80</td>
+<td>TMJ4C1 - Manufacturing Technology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>McFadden, Andrew</td>
+<td></td>
+<td>163</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TNA4Y1.50</td>
+<td>TNA4Y1 - LEVEL 1 APP: Electrician: Const</td>
+<td>1-2(A-B)</td>
+<td>S2</td>
+<td>MacDonald, Patricia</td>
+<td>COOP</td>
+<td>COOP</td>
+<td>1</td>
+<td>30</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>TTJ3C1.80</td>
+<td>TTJ3C1 - Transportation Technology</td>
+<td>3(B) 4(A)</td>
+<td>S2</td>
+<td>Colby, Bradley D.</td>
+<td></td>
+<td>162</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#edf3fe">
+<td>TTJ4C1.50</td>
+<td>TTJ4C1 - Transportation Technology</td>
+<td>1(A) 2(B)</td>
+<td>S2</td>
+<td>Colby, Bradley D.</td>
+<td></td>
+<td>162</td>
+<td>21</td>
+<td>22</td>
+</tr>
+</table>
+
+<br><br>
+<div align="center"><a href="/admin/masterschedule/preferences.html?newpreferences=1">Show Preferences</a></div>
+<br>
+
+<div class="button-row"></div>
+</div>
+<br>
+<!-- end of content of bounding box -->
+
+	<div id="cust-content-footer"><link media="screen" rel="stylesheet" href="/images/css/helpMenu.css"/>
+<script>
+	psVer = '19.11';
+	compHelpState = 'ON';
+	compHelpCountry = 'CAN';
+</script>
+<script src="/scripts/helpMenu.js"></script><!-- 
+    Plugin: Hide Student Contacts
+    Note: Adds New Parent Link back to Admin Home and hides New Contact Entry Link
+-->
+<script>
+$j(function() {
+    newContactLink = $j("#navNewContact").closest("li");
+    searchContactsLink = $j("#navContactSearch").closest("li");
+
+    newParentLink = '<li>';
+    newParentLink += '<a href="/admin/guardians/new_guardian_account.html" id="navNewParent" ';
+    newParentLink += 'title="Create new Parent record">';
+    newParentLink += 'New Parent Entry</a>';
+    newParentLink += '</li>';
+    newContactLink.after(newParentLink);
+
+    searchParentsLink = '<li>';
+    searchParentsLink += '<a href="/admin/guardians/search.html" id="navParentSearch" ';
+    searchParentsLink += 'title="Search for Parents">';
+    searchParentsLink += 'Parent Search</a>';
+    searchParentsLink += '</li>';
+    searchContactsLink.after(searchParentsLink);
+    
+    // hide Contacts links unless enabled for user's security group
+    
+    newContactLink.hide();
+    searchContactsLink.hide();
+    
+
+});
+</script>
+</div>
+	
+<div id="footer">
+	<div id="legal">
+  <p>Copyright &copy; 2005-2019 PowerSchool Group LLC and/or its affiliate(s). All rights reserved.<br/>All trademarks are either owned or licensed by PowerSchool Group LLC and/or its affiliates.</p>
+</div>
+
+</div>
+
+		</div><!--end content-main-->
+	</div><!--end content-->
+
+</div><!--end container-->
+
+<div id="master-drawer-content-div">
+    
+
+<style type="text/css">
+.rightSideDrawerPanel .content, .rightSideDrawerPanel.buttonless .content, .rightSideDrawerPanel .button-row, .rightSideDrawerPanel h1 {
+    width: 500px;
+}
+</style>
+<div id="pluginLinkDrawerPanel" class="rightSideDrawerPanel collapsed buttonless">
+    <div class="content">
+        <h1>Applications <span><button id="pluginLinkDrawerPanelBtnClose" onclick="toggleDrawerPanel('pluginLinkDrawerPanel', 'pluginLinkDrawerModalOverlay', 'collapsed'); return false;">Close</button></span></h1>
+        <div class="box-round">
+    <table id="pluginLinkDrawerTable" class="linkDescList">
+        <colgroup><col/><col/></colgroup>
+        <thead>
+            <tr>
+                <th>Applications</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="/admin/openid/oidredirectaction.action?pluginName=PowerSource%20Single%20Sign-on%20for%20Admin&linkId=186" title="Access PowerSource" id="link-a567421d937c39c374c9b3aa508b3dcf"  target="_blank">PowerSource</a></td>
+                <td>Access PowerSource</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+        <div class="doorProp"></div>
+    </div>
+</div>
+<div id="pluginLinkDrawerModalOverlay" class="drawerModalOverlay"></div>
+
+</div>	
+
+
+
+<div id="cust-leftnav-footer"><!-- JM 2020-02-03: Commented and moved directly to admin_nav_menu_left_css.txt in "Application" section.
+<ul><li><a href="/admin/Intellimedia/Export/homeroom-export-angularjs-kendo.html" id="navclicHomeRoom" title="DOCit Export by Home Room">DOCit Export</a></li></ul> --><script type="text/javascript">
+$j(document).ready( function() {
+
+		var bsid = '';
+		var schoolid = 261;
+
+		if (schoolid != 0) {
+			
+				bsid = '948969';
+				
+			
+		}
+		else {
+			bsid = 0;
+		}
+				
+		$j('#nav-main-menu > ul#left_nav_report').append(
+			'<li><a href="/admin/reports/state/GenericDataViewer.html?grp=ON_Validation&BSID='+bsid+'">Validation Errors Viewer</a></li>' +
+			'<li><a href="/admin/reports/statereports.html?repType=state">Province Reports</a></li>'
+		);
+	} 
+);
+</script>
+<ul>
+	<li id="liSMMessageSenderAdmin"><a href="/admin/messagesender/msgsndr.html" id="navSMMessageSenderAdmin" title="Message Sender">Message Sender</a></li>
+</ul>
+
+<script>
+	var liMessageSenderAdmin = document.getElementById("liSMMessageSenderAdmin");
+
+	if (liMessageSenderAdmin != null) {
+		var pathname = window.location.pathname; // returns path only        
+		if (pathname.toLowerCase().indexOf("/admin") == 0) {
+			var ul = document.getElementById("left_nav_functions");        
+			if (ul != null)
+			 	// Move to "Functions" section
+				ul.appendChild(liMessageSenderAdmin);
+			else 
+			    // Hide
+			    liMessageSenderAdmin.style.display = "none";
+		} else
+			// Hide
+			liMessageSenderAdmin.style.display = "none";
+	}
+</script></div>
+
+</body>
+</html><!-- non framed -->

@@ -1,0 +1,70 @@
+/*
+Darko Bunic
+http://www.redips.net/
+Jan, 2010.
+*/
+
+body {
+	font-family: arial;
+}
+
+/* add bottom margin between tables */
+#table1,#table2 {
+	margin-bottom: 20px;
+}
+
+/* drag container (contains two tables) */
+#redips-drag {
+	margin: auto;
+	width: 730px;
+}
+
+/* drag objects (DIV inside table cells) */
+.redips-drag {
+	position: relative;
+	cursor: move;
+	margin: 2px auto;
+	z-index: 10;
+	background-color: #f0f0f0;
+	text-align: left;
+	padding: 5px;
+	font-size: 12px;
+	width: 190px;
+	border: 2px solid lightgreen;
+	/* round corners for FF, Chrome, Safari (except IE) */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	/* shadow for FF, Chrome, Safari (except IE)*/
+	/*
+	-moz-box-shadow: 4px 4px 8px #444;
+	-webkit-box-shadow: 4px 4px 8px #444;
+	box-shadow: 4px 4px 8px #444;
+	*/
+}
+
+/* drag objects border for the first table */
+.t1 {
+	border: 1px solid #9B9EA2;;
+}
+
+/* tables 
+div#redips-drag table {
+	background-color: #e0e0e0;
+	border-collapse: collapse;
+}*/
+
+/* table cells */
+div#redips-drag td {
+	/*height: 50px;
+	border: 1px solid white;*/
+	text-align: center;
+	font-size: 12px;
+	padding: 2px;
+}
+
+/* message cell (marked as forbidden) */
+.redips-mark {
+	color: white;
+	background-color: SteelBlue;
+}
